@@ -1,10 +1,22 @@
 ## Python3
 # Beginning of Python3
 
+# Contents:
+#   1. Commenting
+#   2. The in-built print function
+
 # Single line comments in python is identified-
 # by a hash at the beginning of the comment.
 
-# Basic use case of inbuilt print function, this displays output on the console.
+'''Multi line comments in python is identified
+when triple quotes are present at the start 
+and end of the comment. Either single 
+quote or double quotes can be 
+used to serve the purpose
+of multi-line comment'''
+
+# Basic use case of inbuilt print function,
+# this displays output on the console.
 print('First Hello World')
 print("Second Hello World")
 print('\n\n')
