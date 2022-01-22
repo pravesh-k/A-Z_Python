@@ -115,6 +115,8 @@ bb = "jane"
 print(f'bb = {bb}')
 bb = "bob"
 print(f'bb = {bb}')
+BB = 150
+print(f'BB = {BB}, is different than bb as\n     python is case-sensitive')
 
 # cc += 10 # Produces error as cc is not defined prior to sum operation
 
