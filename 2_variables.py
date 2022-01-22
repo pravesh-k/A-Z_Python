@@ -16,7 +16,23 @@ e = 10
 print(e)
 f = 00
 print(f)
-# g = A     # Produces error
-print(g)
+
+# Produces error
+# g = A     
+# print(g)
+
 h = 'A'
 print(h)
+
+# Produces error
+# i = This is a string
+
+i = 'This is a string'
+print(i)
+j = "This is also string"
+print(j)
+k = '100'
+l = 100
+print(k, 'is of type string\nbut', l, 'is of type int or numeric')
+print(f'printing using f-string techinque\nk={k} and l={l}')
+print('printing using string formatting techinque\nk={} and l={}'.format(k, l))
