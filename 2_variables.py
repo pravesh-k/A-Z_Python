@@ -63,3 +63,31 @@ print(r)
 
 s = t = p + 15
 print(f's = {s}, t = {t}, p = {p},\n    s and t are assigned the\n  final sum value of p and 15')
+
+u = 15
+u = u - 5
+print(f'u = {u}')
+# same can be achieved by compound assignment operator
+u -= 5
+print(f'u = {u}')
+
+# more examples of compound assignment operators
+v = 20
+v += 3
+print(f'v = {v}')
+
+w = 30
+w /= 10
+print(f'w = {w}')
+
+x = 4
+x //= 3
+print(f'x = {x}')
+
+y = 8
+y *= 4
+print(f'y = {y}')
+
+z = 100
+z %= 7
+print(f'z = {z}')
