@@ -33,6 +33,16 @@ j = "This is also string"
 print(j)
 k = '100'
 l = 100
-print(k, 'is of type string\nbut', l, 'is of type int or numeric')
-print(f'printing using f-string techinque\nk={k} and l={l}')
-print('printing using string formatting techinque\nk={} and l={}'.format(k, l))
+print(k, 'is of type string\n    but', l, 'is of type int or numeric')
+print(f'printing using f-string techinque\n    k={k} and l={l}')
+print('printing using string formatting techinque\n    k={} and l={}'.format(k, l))
+
+m = 50
+n = m
+print(f'm = {m}, n = {n},\n    here the value of n is assigned using m')
+
+n = m = 50
+print(f'm = {m}, n = {n},\n    here also the value of n is assigned using m\n    but the here the value is assigned to\n    m and n simultaneously')
+
+o, p, q = 10, 20, 'Bye'
+print(f'o = {o}, p = {p}, q = {q}, simultaneous value assignment to\n   variables but values are different')
