@@ -91,3 +91,31 @@ print(f'y = {y}')
 z = 100
 z %= 7
 print(f'z = {z}')
+
+# These variables are "constants" by convention:
+NUMBER_OF_DAYS_IN_A_WEEK = 7
+print(f'number of days in a week = {NUMBER_OF_DAYS_IN_A_WEEK}')
+NUMBER_OF_MONTHS_IN_A_YEAR = 12
+print(f'number of months in a year = {NUMBER_OF_MONTHS_IN_A_YEAR}')
+
+# Nothing is actually stopping us from redefining them...
+NUMBER_OF_DAYS_IN_A_WEEK = 8
+print(f'number of days in a week = {NUMBER_OF_DAYS_IN_A_WEEK}')
+# ...but it's probably not a good idea.
+PI = 3.14
+print(f'value of mathematical constant pi = {PI}')
+
+# we can use the assignment operator to assign new values to the variables
+aa = 3
+print(f'aa = {aa}')
+aa = 2
+print(f'aa = {aa}')
+
+bb = "jane"
+print(f'bb = {bb}')
+bb = "bob"
+print(f'bb = {bb}')
+
+# cc += 10 # Produces error as cc is not defined prior to sum operation
+
+# dd = any_object
