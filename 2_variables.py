@@ -1,8 +1,8 @@
 # # Contents:
-#   1. Commenting
-#   2. The in-built print function
+#   1. Variables
+#   2. Constants
 
-# Defining variables in Python3
+# 1. Defining variables in Python3
 
 a = 1
 print(a)
@@ -92,6 +92,7 @@ z = 100
 z %= 7
 print(f'z = {z}')
 
+# 2. Constants
 # These variables are "constants" by convention:
 NUMBER_OF_DAYS_IN_A_WEEK = 7
 print(f'number of days in a week = {NUMBER_OF_DAYS_IN_A_WEEK}')
