@@ -13,16 +13,60 @@
 a = 10
 b = 5
 # Addition
-print(a + b)
+print('a + b =',a + b)
 # Subtraction
-print(a - b)
+print('a - b =', a - b)
 # Multiplication
-print(a * b)
+print('a * b =', a * b)
 # Division
-print(a / b)
+print('a / b =', a / b)
 # Modulus
-print(a % b)
+print('a "%" b =', a % b)
 # Exponentiation
-print(a ** b)
+print('a ** b =', a ** b)
 # Floor division
-print(a // b)
+print('a // b =', a // b,'\n')
+
+
+# 2. Assingment Operators: used to assign values to variables
+
+c = 5
+print('c =', c)
+c += 3
+print('c += 3, c =', c)
+c = 5
+c -= 3
+print('c -= 3, c =', c)
+c = 5
+c *= 3
+print('c *= 3, c =', c)
+c = 5
+c //= 3
+print('c //= 3, c =', c)
+c = 5
+c /= 3
+print('c /= 3, c =', c)
+c = 5
+c %= 3
+print('c %= 3, c =', c)
+c = 5
+c **= 3
+print('c **= 3, c =', c)
+c = 5
+c &= 3
+print('c &= 3, c =', c)
+c = 5
+c |= 3
+print('c |= 3, c =', c)
+c = 5
+c ^= 3
+print('c ^= 3, c =', c)
+c = 40
+c >>= 3
+print('c >>= 3, c =', c)
+c = 5
+c <<= 3
+print('c <<= 3, c =', c)
+
+
+# 3. Comparision Operators: used to compare two values
