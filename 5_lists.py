@@ -90,4 +90,45 @@ print('prime_num_list[:3] =', prime_num_list[:3],
     '\nprime_num_list[-3:] =', prime_num_list[-3:],
     '\nprime_num_list[:-3] =', prime_num_list[:-3],
     '\nprime_num_list[::2] =', prime_num_list[::2],
+    '\n'
+    )
+
+
+# **note 1: inbuilt function id() can be used to find 
+#       the memory address of any variable in python3
+
+print('memory address of fruit_list =', id(fruit_list),
+    '\n'
+    )
+
+# 4. Copying a list to another variable
+
+# copying a list to another variable will 
+# create an exact copy with same memory location
+copy_prime_num_list = prime_num_list
+print('prime_num_list =', prime_num_list,
+    '\ncopy_prime_num_list =', copy_prime_num_list,
+    '\nmemory address of prime_num_list =', id(prime_num_list),
+    '\nmemory address of copy_prime_num_list =', id(copy_prime_num_list),
+    '\n'
+    )
+
+# shallow copying the list to a variable will
+# will be stored in a different memory location
+copy2_prime_num_list = prime_num_list[:]
+print('prime_num_list =', prime_num_list,
+    '\ncopy2_prime_num_list =', copy2_prime_num_list,
+    '\nmemory address of prime_num_list =', id(prime_num_list),
+    '\nmemory address of copy2_prime_num_list =', id(copy2_prime_num_list),
+    '\n'
+    )
+
+
+# **note 2: inbuilt function len() can be used to return 
+#       the length (the number of items) of an object. 
+#       The argument may be a sequence (such as a string, 
+#       bytes, tuple, list, or range) or a collection 
+#       (such as a dictionary, set, or frozen set).
+
+print('length of list fruit_list =', len(fruit_list),
     '\n')
