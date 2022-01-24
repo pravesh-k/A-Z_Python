@@ -132,3 +132,48 @@ print('prime_num_list =', prime_num_list,
 
 print('length of list fruit_list =', len(fruit_list),
     '\n')
+
+
+# 5. List methods provided by Python3
+
+# a. Add and item to the end of the list
+prime_num_list.append(19)
+print('prime_num_list =', prime_num_list,
+    '\n'
+    )
+# the append function is equivalent to the below operation
+prime_num_list[len(prime_num_list):] = [23]     # notice the square brackets around 23
+print('prime_num_list =', prime_num_list,
+    '\n'
+    )
+
+# **note 3: Iterable is an object which can be looped over 
+#       or iterated over with the help of a for loop. Objects 
+#       like lists, tuples, sets, dictionaries, strings, etc. 
+#       are called iterables.
+
+
+# b. Extend the list by appending all the items from the iterable
+more_fruits_list = ['grapes', 'pineapple']
+fruit_list.extend(more_fruits_list)
+print('fruit_list =', fruit_list,
+    '\n'
+    )
+
+# the append function is equivalent to the below operation
+extra_fruit_lists = ['mango', 'strawberry']
+fruit_list[len(fruit_list):] = extra_fruit_lists
+print('fruit_list =', fruit_list,
+    '\n'
+    )
+# c. Insert an item at a given position
+more_fruits_list.insert(1, 'blackberry')
+print('more_fruits_list =', more_fruits_list,
+    '\n'
+    )
+
+# imitating functionality of append method using insert method
+more_fruits_list.insert(len(more_fruits_list), 'orange')
+print('more_fruits_list =', more_fruits_list,
+    '\n'
+    )
