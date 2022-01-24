@@ -66,7 +66,50 @@ c >>= 3
 print('c >>= 3, c =', c)
 c = 5
 c <<= 3
-print('c <<= 3, c =', c)
+print('c <<= 3, c =', c, '\n')
 
 
 # 3. Comparision Operators: used to compare two values
+
+# Equal
+print('5 == 3 returns', 5 == 3)
+print('4 == 4 returns', 4 == 4)
+
+# Not Equal
+print('5 != 3 returns', 5 != 3)
+print('4 != 4 returns', 4 != 4)
+
+# Greater than
+print('5 > 3  returns', 5 > 3)
+print('4 > 4  returns', 4 > 4)
+print('3 > 4  returns', 3 > 4)
+
+# Less than
+print('5 < 3  returns', 5 < 3)
+print('4 < 4  returns', 4 < 4)
+print('3 < 4  returns', 3 < 4)
+
+# Greater than or equal to
+print('5 >= 3 returns', 5 >= 3)
+print('4 >= 4 returns', 4 >= 4)
+print('3 >= 4 returns', 3 >= 4)
+
+# Less than or equal to
+print('5 <= 3 returns', 5 <= 3)
+print('4 <= 4 returns', 4 <= 4)
+print('3 <= 4 returns', 3 <= 4, '\n')
+
+
+# 4. Logical Operators: used to combine conditional statements
+
+# 'and' operator
+print('3 < 5 and 3 < 10 returns', 3 < 5 and 3 < 10)
+print('8 < 5 and 8 < 10 returns', 8 < 5 and 8 < 10)
+
+# 'or' operator
+print('3 < 5 or 3 < 10 returns', 3 < 5 or 3 < 10)
+print('8 < 5 or 8 < 10 returns', 8 < 5 or 8 < 10)
+
+# 'not' operator
+print('not(3 < 5 and 3 < 10) returns', not(3 < 5 and 3 < 10))
+print('not(8 < 5 and 8 < 10) returns', not(8 < 5 and 8 < 10), '\n')
