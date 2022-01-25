@@ -17,7 +17,6 @@
 # 1. Defining a list
 
 # creating an empty list
-from itertools import count
 
 
 empty_list_1 = []
