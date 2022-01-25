@@ -83,4 +83,42 @@ del statement
 # print(f'statement: {statement}\n')    # Raises NameError
 
 
+# 5. Escape Sequencing
 
+'''
+**note 3: Printing Strings with single and double quotes in it causes
+ SyntaxError because strings are defined using single/double quotes.
+ Hence, to print such a string either triple quotes are used or escape 
+ sequences are used to print such strings.
+
+ Escape sequences start with a backslash and can be interpreted 
+ differently. If single quotes are used to represent a string, then all 
+ the single quotes present in the string must be escaped and same is done 
+ for Double Quotes. 
+
+ To ignore the escape sequences in a String, 'r' or 'R' is used, this implies that the string is a raw string and escape sequences inside it are to be ignored.
+'''
+
+string5 = "Hello 'World"
+string6 = 'Hel"lo \'World'
+string7 = '''Hello 'Wor"ld'''
+string8 = "Hell\"o 'World"
+
+print(f'Escaping single quote using double quotes for string creation, string5: {string5}'
+    f'\nEscaping single and double quote using escape sequence for single quote, string6: {string6}'
+    f'\nEscaping single and double quote using triple quotes for string creation, string7: {string7}'
+    f'\nEscaping single and double quote using escape sequence for double quote, string8: {string8}'
+    '\n')
+
+string9 = 'This is \x45\x47\x47\x53 in \x48\x45\x58'
+print(f'escaping HEX format\n{string9}')
+string10 = r"This is \x45\x47\x47\x53 in \x48\x45\x58"
+print(f'ignoring HEX format\n{string10}')
+
+
+# 6. Formatting of Strings
+
+
+
+
+# 7. String methods
