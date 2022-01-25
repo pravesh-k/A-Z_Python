@@ -7,6 +7,13 @@
 #   float
 #   complex
 
+# Contents:
+#   1. Creating numeric type variables
+#   2. Arithmetic operations between different numeric data types
+#   3. Type conversion using built in functions
+#   4. Problem with decimal calculation in python3
+
+
 '''
 **********************************************************
 **note 1: 'type()' in-built function: It returns class type
