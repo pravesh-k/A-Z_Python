@@ -14,6 +14,9 @@
 # 1. Defining a list
 
 # creating an empty list
+from itertools import count
+
+
 empty_list_1 = []
 empty_list_2 = list()
 
@@ -250,4 +253,21 @@ print('bool_list.count(True)', bool_list.count(True),
     '\n'
     )
 
-# h. 
+# h. Sort the items of the list in place.
+#    The same functionality is obtained using python inbuilt function
+#    name 'sorted()'. This function is helpful to sort other sequence
+#    data type as well.
+#    syntax: a_list.sort(key, reverse)
+#            where key and reverse parameters are optional
+print('copy2_prime_num_list =', copy2_prime_num_list)
+
+copy2_prime_num_list.sort()
+print('In ascending order, copy2_prime_num_list.sort() \n =', copy2_prime_num_list)
+
+copy2_prime_num_list.sort(reverse=True)
+print('In descending order,copy2_prime_num_list.sort(reverse=True) \n =', copy2_prime_num_list)
+
+print('more_fruits_list\n =', more_fruits_list)
+
+more_fruits_list.sort(key=len)      #len function is used as key
+print('In ascending order,using defined order to sort, i.e. sort by\n the element length, more_fruits_list.sort(key=len) \n =', more_fruits_list)
