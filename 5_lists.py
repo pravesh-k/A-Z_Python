@@ -279,14 +279,41 @@ copy2_prime_num_list.reverse()
 print('reversing the list elements by position\n copy2_prime_num_list.reverse() =', copy2_prime_num_list)
 
 # The above method can be replicated by the below operation
-print('copy2_prime_num_list[::-1] =', copy2_prime_num_list[::-1])
+print('copy2_prime_num_list[::-1] =', copy2_prime_num_list[::-1], '\n')
 
 # j. Return a shallow copy of the list
 #    syntax: list.copy()
 copy_more_fruits_list = more_fruits_list.copy()
-print('copy_more_fruits_list\n =', copy_more_fruits_list)
+print('copy_more_fruits_list =', copy_more_fruits_list)
 
 # This can be achieved using the below operation
 copy2_more_fruits_list = more_fruits_list[:]
-print('copy2_more_fruits_list\n =', copy2_more_fruits_list)
+print('copy2_more_fruits_list =', copy2_more_fruits_list, '\n')
 
+
+# 6. List Comprehensions
+
+# A normal approach to form a list of squares of few whole numbers
+squares_1 = []
+for x in range(6):
+    squares_1.append(x**2)
+print('squares_1 =', squares_1)
+
+# the above operation can be reduced to a concise and 
+# readable piece of code in a single line using list comprehension
+squares_2 = [x**2 for x in range(6)]
+print('squares_2 =', squares_2)
+
+# more examples
+# using normal for loop
+combs = []
+for x in [1,2,3]:
+     for y in [3,1,4]:
+         if x != y:
+             combs.append((x, y))
+print('combs =', combs)
+
+# using list comprehension
+print([(x,y) for x in [1,2,3] for y in [3,1,4] if x != y])
+
+# note the order of for and if statements in both the implementation
