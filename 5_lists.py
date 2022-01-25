@@ -9,6 +9,9 @@
 #   1. Defining Lists
 #   2. printing lists
 #   3. Accessing items from list
+#   4. Copying a list to another variable
+#   5. List methods provided by Python3
+#   6. List Comprehensions
 
 
 # 1. Defining a list
@@ -97,15 +100,17 @@ print('prime_num_list[:3] =', prime_num_list[:3],
     )
 
 
-# ***************************************************
-# **note 1: inbuilt function id() can be used to find 
-#       the memory address of any variable in python3
+'''
+***************************************************
+**note 1: inbuilt function id() can be used to find 
+      the memory address of any variable in python3
 
-# example:
+example:
 print('memory address of fruit_list =', id(fruit_list),
     '\n'
     )
-# ***************************************************
+***************************************************
+'''
 
 
 # 4. Copying a list to another variable
@@ -131,17 +136,19 @@ print('prime_num_list =', prime_num_list,
     )
 
 
-# ***************************************************
-# **note 2: inbuilt function len() can be used to return 
-#       the length (the number of items) of an object. 
-#       The argument may be a sequence (such as a string, 
-#       bytes, tuple, list, or range) or a collection 
-#       (such as a dictionary, set, or frozen set).
+'''
+***************************************************
+**note 2: inbuilt function len() can be used to return 
+      the length (the number of items) of an object. 
+      The argument may be a sequence (such as a string, 
+      bytes, tuple, list, or range) or a collection 
+      (such as a dictionary, set, or frozen set).
 
-# example:
+example:
 print('length of list fruit_list =', len(fruit_list),
     '\n')
-# ***************************************************
+***************************************************
+'''
 
 
 # 5. List methods provided by Python3
@@ -159,12 +166,14 @@ print('prime_num_list =', prime_num_list,
     )
 
 
-# ***************************************************
-# **note 3: Iterable is an object which can be looped over 
-#       or iterated over with the help of a for loop. Objects 
-#       like lists, tuples, sets, dictionaries, strings, etc. 
-#       are called iterables.
-# ***************************************************
+'''
+***************************************************
+**note 3: Iterable is an object which can be looped over 
+      or iterated over with the help of a for loop. Objects 
+      like lists, tuples, sets, dictionaries, strings, etc. 
+      are called iterables.
+***************************************************
+'''
 
 
 # b. Extend the list by appending all the items from the iterable
@@ -206,20 +215,22 @@ print('prime_num_list.pop() =', prime_num_list.pop(),
     '\n')
 
 
-# ***************************************************
-# **note 4: 'del' keyword  in python is primarily used 
-#       to delete objects in Python. Since everything in 
-#       python represents an object in one way or another, 
-#       The del keyword can also be used to delete a list, 
-#       slice a list, delete a dictionaries, remove key-value 
-#       pairs from a dictionary, delete variables, etc.
+'''
+***************************************************
+**note 4: 'del' keyword  in python is primarily used 
+      to delete objects in Python. Since everything in 
+      python represents an object in one way or another, 
+      The del keyword can also be used to delete a list, 
+      slice a list, delete a dictionaries, remove key-value 
+      pairs from a dictionary, delete variables, etc.
 
-# example:
+example:
 x = 15
 print('x =', x)
 del x
-# print('x =', x)       # This raises a name error
-# ***************************************************
+print('x =', x)       # This raises a name error
+***************************************************
+'''
 
 
 # e. Remove all items from the list.
