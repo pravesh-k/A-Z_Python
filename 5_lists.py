@@ -265,9 +265,28 @@ copy2_prime_num_list.sort()
 print('In ascending order, copy2_prime_num_list.sort() \n =', copy2_prime_num_list)
 
 copy2_prime_num_list.sort(reverse=True)
-print('In descending order,copy2_prime_num_list.sort(reverse=True) \n =', copy2_prime_num_list)
+print('In descending order,copy2_prime_num_list.sort(reverse=True) \n =', copy2_prime_num_list, '\n')
 
 print('more_fruits_list\n =', more_fruits_list)
 
 more_fruits_list.sort(key=len)      #len function is used as key
-print('In ascending order,using defined order to sort, i.e. sort by\n the element length, more_fruits_list.sort(key=len) \n =', more_fruits_list)
+print('In ascending order,using defined order to sort, i.e. sort by\n the element length, more_fruits_list.sort(key=len) \n =', more_fruits_list, '\n')
+
+# i. Reverse the elements of the list in place.
+#    syntax: a_list.reverse()
+print('copy2_prime_num_list =', copy2_prime_num_list)
+copy2_prime_num_list.reverse()
+print('reversing the list elements by position\n copy2_prime_num_list.reverse() =', copy2_prime_num_list)
+
+# The above method can be replicated by the below operation
+print('copy2_prime_num_list[::-1] =', copy2_prime_num_list[::-1])
+
+# j. Return a shallow copy of the list
+#    syntax: list.copy()
+copy_more_fruits_list = more_fruits_list.copy()
+print('copy_more_fruits_list\n =', copy_more_fruits_list)
+
+# This can be achieved using the below operation
+copy2_more_fruits_list = more_fruits_list[:]
+print('copy2_more_fruits_list\n =', copy2_more_fruits_list)
+
