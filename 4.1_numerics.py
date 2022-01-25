@@ -173,3 +173,38 @@ print(f'a\ttype: {type(float(a))}\tvalue: {float(a)}'
     f'\nd\ttype: {type(complex(d))}\tvalue: {complex(d)}'
     # f'\ne\ttype: {type(int(e))}\tvalue: {int(e)}'     # Raises TypeError
     '\n')
+
+
+# 4. Problem with decimal calculation in python3
+
+x, y = 1.1, 2.2
+z = x + y
+print(f'x = {x}\ty = {y}\texpected z = 3.3\nz = {z}')     # A math error is noticeable
+x, y = 1.2, 1
+z =  x - y
+print(f'x = {x}\ty = {y}\texpected z = 0.2\nz = {z}\n')     # A math error is noticeable
+
+'''
+Explanation to the anomaly:
+It’s a problem caused when the internal representation of floating-point numbers, which uses a fixed number of binary digits to represent a decimal number. It is difficult to represent some decimal numbers in binary, so in many cases, it leads to small roundoff errors. 
+
+In this case, taking 1.2 as an example, the representation of 0.2 in binary is 0.00110011001100110011001100…… and so on. It is difficult to store this infinite decimal number internally. Normally a float object’s value is stored in binary floating-point with a fixed precision (typically 53 bits). So we represent 1.2 internally in binary as,
+
+1.0011001100110011001100110011001100110011001100110011  
+Which is exactly equal to in decimal as :
+
+1.1999999999999999555910790149937383830547332763671875
+'''
+
+# For such cases, decimal module comes to rescue
+from decimal import Decimal
+
+x = Decimal('1.1')
+y = Decimal('2.2')
+z = x + y
+print(f'x = {x}\ty = {y}\texpected z = 3.3\nz = {z}')
+
+x = Decimal('1.2')
+y = Decimal('1')
+z = x - y
+print(f'x = {x}\ty = {y}\texpected z = 0.2\nz = {z}')
