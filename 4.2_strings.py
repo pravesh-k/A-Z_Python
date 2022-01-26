@@ -162,7 +162,7 @@ string18 = "|{:<10}|{:^10}|{:>10}|".format('Coding', 'for', 'Life')
 print(f"\nleft, center and right alignment with Formatting:\n{string18}")
  
 # To demonstrate aligning of spaces
-string19 = "\n{0:^19} was founded in {1:<8}!".format("CodingForLife", 2005)
+string19 = "\n!{0:^19} was founded in {1:<8}!".format("CodingForLife", 2005)
 print(f"\naligning of spaces with Formatting:\n{string19}\n")
 
 
