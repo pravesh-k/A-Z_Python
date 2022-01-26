@@ -96,7 +96,9 @@ del statement
  the single quotes present in the string must be escaped and same is done 
  for Double Quotes. 
 
- To ignore the escape sequences in a String, 'r' or 'R' is used, this implies that the string is a raw string and escape sequences inside it are to be ignored.
+ To ignore the escape sequences in a String, 'r' or 'R' is used, this 
+ implies that the string is a raw string and escape sequences inside
+ it are to be ignored.
 '''
 
 string5 = "Hello 'World"
@@ -113,12 +115,55 @@ print(f'Escaping single quote using double quotes for string creation, string5: 
 string9 = 'This is \x45\x47\x47\x53 in \x48\x45\x58'
 print(f'escaping HEX format\n{string9}')
 string10 = r"This is \x45\x47\x47\x53 in \x48\x45\x58"
-print(f'ignoring HEX format\n{string10}')
+print(f'ignoring HEX format\n{string10}\n')
 
 
 # 6. Formatting of Strings
 
+'''
+**note 4: Strings in Python can be formatted with the use of format() method 
+which is a very versatile and powerful tool for formatting Strings. 
+Format method in String contains curly braces {} as placeholders 
+which can hold arguments according to position or keyword to 
+specify the order.
+'''
 
+# Default Order
+string11 = "{} {} {}".format('Good', 'Luck', 'Developer')
+# Positional Formatting
+string12 = "{2} {0} {1}".format('Good', 'Luck', 'Developer')
+# Keyword Formatting
+string13 = "{d} {u} {z}".format(z='Good', d='Luck', u='Developer')
+print(f'default formatting on string11: {string11}'
+    f'\npositional formatting on string12: {string12}'
+    f'\nkeyword formatting on string13: {string13}'
+    '\n')
+
+# Integer and float formatting & rounding float decimals
+
+# Formatting of Integers
+string14 = "{0:b}".format(16)
+string17 = "{0:x}".format(16)
+# Formatting of Floats
+string15 = "{0:e}".format(165.6458)
+# Rounding off Integers
+string16 = "{0:.2f}".format(1/6)
+print(f"Binary representation of 16 is {string14}",
+    f"\nHex representation of 16 is {string17}",
+    f"\nExponent representation of 165.6458 is {string15}",
+    f"\nTwo decimal rounding of 1/6 is : {string16}",
+    '\n')
+
+# A string can be left() or center(^) justified with the use of 
+# format specifiers, separated by a colon(:).
+
+# String alignment
+string18 = "|{:<10}|{:^10}|{:>10}|".format('Coding', 'for', 'Life')
+print(f"\nleft, center and right alignment with Formatting:\n{string18}")
+ 
+# To demonstrate aligning of spaces
+string19 = "\n{0:^19} was founded in {1:<8}!".format("CodingForLife", 2005)
+print(f"\naligning of spaces with Formatting:\n{string19}")
 
 
 # 7. String methods
