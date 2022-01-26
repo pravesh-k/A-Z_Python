@@ -163,7 +163,49 @@ print(f"\nleft, center and right alignment with Formatting:\n{string18}")
  
 # To demonstrate aligning of spaces
 string19 = "\n{0:^19} was founded in {1:<8}!".format("CodingForLife", 2005)
-print(f"\naligning of spaces with Formatting:\n{string19}")
+print(f"\naligning of spaces with Formatting:\n{string19}\n")
 
 
 # 7. String methods
+
+'''
+capitalize()	Converts the first character of the string to a uppercase
+casefold()	    Implements caseless string matching
+center()	    Pad the string on left and right with the specified character.
+count()	        Returns the number of occurrences of a substring in the string.
+encode()	    Encodes strings with the specified encoded scheme
+endswith()	    Returns “True” if a string ends with the given suffix
+find()	        Returns the lowest index of the substring if it is found
+format()	    Formats the string for printing it to console
+format_map()	Formats specified values in a string using a dictionary
+index()	        Returns the position of the first occurrence of a substring
+isalnum()	    Checks whether all characters are alphanumeric or not
+isalpha()	    Checks whether all characters in the string are alphabets
+isdecimal()	    Checks whether all characters in a string are decimal
+isdigit()	    Checks whether all characters in the string are digits
+isidentifier()	Check whether a string is a valid identifier or not
+islower()	    Checks if all characters in the string are lowercase
+isnumeric()	    Checks whether all characters are numeric characters
+isspace()	    Checks whether all characters are whitespace characters
+istitle()	    Returns “True” if the string is a title cased string
+isupper()	    Checks if all characters in the string are uppercase
+join()	        Returns a concatenated string
+ljust()	        Left aligns the string according to the width specified
+lower()	        Converts all uppercase characters in a string into lowercase
+lstrip()	    Returns the string with leading characters removed
+partition()	    Splits the string at the first occurrence of the separator 
+replace()	    Replaces all occurrences of a substring with another substring
+rfind()	        Returns the highest index of the substring
+rindex()	    Returns the highest index of the substring inside the string
+rjust()	        Right aligns the string according to the width specified
+rpartition()	Split the given string into three parts
+rsplit()	    Split the string from the right by the specified separator
+rstrip()	    Removes trailing characters
+splitlines()	Split the lines at line boundaries
+startswith()	Checks whether if a string starts with the given prefix
+strip()	        Returns the string with both leading and trailing characters
+swapcase()	    Converts all uppercase characters to lowercase and vice versa
+title()	        Convert string to title case
+translate()	    Modify string according to given translation mappings
+upper()	        Converts all lowercase characters in a string into uppercase
+'''
