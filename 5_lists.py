@@ -7,7 +7,7 @@
 
 # # Contents:
 #   1. Defining Lists
-#   2. printing lists
+#   2. Printing lists
 #   3. Accessing items from list
 #   4. Copying a list to another variable
 #   5. List methods provided by Python3
