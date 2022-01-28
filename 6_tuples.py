@@ -163,3 +163,33 @@ print(f'str1_to_tuple : {str1_to_tuple}'
     f'\nlist_to_tuple : {list_to_tuple}'
     f'\nset_to_tuple : {set_to_tuple}'
     '\n')
+
+# g. Unpacking tuples
+# We can extract the items from tuples and assign them to variables
+a, b, c, d = even_num_tuple
+print(f'a : {a}, b : {b}, c : {c}, d : {d}\n')
+
+# If items in tuples are more than variable count, then use astericks (*)
+# with the variable to assign more than one item from tuple as a list
+
+a, b, c, *d = num_tuple
+print(f'a : {a}, b : {b}, c : {c}, d : {d}\n')
+a, b, *c, d = num_tuple
+print(f'a : {a}, b : {b}, c : {c}, d : {d}\n')
+*a, b, c, d = num_tuple
+print(f'a : {a}, b : {b}, c : {c}, d : {d}\n')
+
+
+# 6. Tuple built-in methods
+
+# a. Return the number of times a specified item occurs in a tuple
+#    syntax: a_tuple.count(value)
+print(f'count of True in bool_tuple : {bool_tuple.count(True)}'
+    f'\ncount of False in bool_tuple : {bool_tuple.count(False)}'
+    '\n')
+
+# b. Search for the first occurrence of the value, and return its position
+#    syntax: a_tuple.index(value)
+print(f'position of 5 in num_tuple : {num_tuple.index(5)}'
+    f'\nposition of 8 in num_tuple : {num_tuple.index(8)}'
+    '\n')
