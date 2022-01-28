@@ -145,3 +145,21 @@ even_num_set = set(even_num_tuple)
 print(f'type of even_num_list : {type(even_num_list)}'
     f'\ntype of even_num_set : {type(even_num_set)}\n'
     '\n')
+
+# e. Finding length, max and min of a tuple
+print(f'length of even_num_tuple : {len(even_num_tuple)}'
+    f'\nmin of even_num_tuple : {min(even_num_tuple)}'
+    f'\nmax of even_num_tuple : {max(even_num_tuple)}'
+    '\n')
+
+# f. Type-casting string, list and set into tuple
+str1_to_tuple = tuple('Python')
+str2_to_tuple = tuple(('Python',))
+list_to_tuple = tuple([0, 6, 8, 10, 101])
+set_to_tuple = tuple({1, 1, 0, 3, 1, 2, 4})
+
+print(f'str1_to_tuple : {str1_to_tuple}'
+    f'\nstr2_to_tuple : {str2_to_tuple}'
+    f'\nlist_to_tuple : {list_to_tuple}'
+    f'\nset_to_tuple : {set_to_tuple}'
+    '\n')
