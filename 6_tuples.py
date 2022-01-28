@@ -8,6 +8,7 @@
 #   1. Creating tuples
 #   2. Printing tuples
 #   3. Accessing tuples elements
+#   4. Immutable behaviour check
 
 
 # 1. Creating tuples
@@ -92,4 +93,55 @@ print(f'prime_num_tuple[::2] : {prime_num_tuple[::2]}'
     f'\nprime_num_tuple[::3] : {prime_num_tuple[::3]}'
     f'\nprime_num_tuple[2:5:2] : {prime_num_tuple[2:5:2]}'
     f'\nprime_num_tuple[-5:-2:2] : {prime_num_tuple[-5:-2:2]}'
+    '\n')
+
+# e. Accessing all elements starting from last
+print(f'prime_num_tuple[::-1] : {prime_num_tuple[::-1]}'
+    f'\nprime_num_tuple[::-2] : {prime_num_tuple[::-2]}'
+    '\n')
+
+
+# 4. Immutable behaviour check
+
+# Updating elements of tuple
+# prime_num_tuple[2] = 19       # Raises TypeError
+# prime_num_tuple.append(19)    # Raises AtrributeError
+# prime_num_tuple.remove(5)     # Raises AtrributeError
+
+'''
+The above operations (modify, add, remove) on values of tuple 
+are not allowed and thus tuples prove to be immutable
+'''
+
+
+# 5. Operations on/with tuples
+
+# a. Concatenation of tuples
+odd_num_tuple = 1, 3, 5, 7
+even_num_tuple = 2, 4, 6, 8
+num_tuple = odd_num_tuple + even_num_tuple
+print(f'odd_num_tuple : {odd_num_tuple}'
+    f'\neven_num_tuple : {even_num_tuple}'
+    f'\nnum_tuple : {num_tuple}'
+    '\n')
+
+# b. Deletion of a tuple
+del odd_num_tuple
+# print(f'odd_num_tuple : {odd_num_tuple}\n')      # Raises NameError
+
+# c. Mutable list as an item in a tuple
+'''
+If a list is present as an item in a tuple, then the list item will follow the original behaviour of a list but other items of the tuple will follow the behviour of tuple except the list items.
+'''
+
+tuple_of_tuples[2][0] = 5
+tuple_of_tuples[2].append(100)
+tuple_of_tuples[2].pop(2)
+print(f'tuple_of_tuples : {tuple_of_tuples}\n')
+
+# d. Type-casting tuple into list and set
+even_num_list = list(even_num_tuple)
+even_num_set = set(even_num_tuple)
+print(f'type of even_num_list : {type(even_num_list)}'
+    f'\ntype of even_num_set : {type(even_num_set)}\n'
     '\n')
