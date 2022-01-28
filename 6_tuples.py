@@ -74,3 +74,22 @@ print(f'direction_tuple[-1] : {direction_tuple[-1]}'
     f'\ndirection_tuple[-3] : {direction_tuple[-3]}'
     f'\ntuple_of_tuples[-2] : {tuple_of_tuples[-2]}'
     '\n')
+
+# c. Accessing a sub-sequences in a tuple/slicing through a tuple
+print(f'prime_num_tuple[:] : {prime_num_tuple[:]}'
+    f'\nprime_num_tuple[2:5] : {prime_num_tuple[2:5]}'
+    # f'\nprime_num_tuple[5:2] : {prime_num_tuple[5:2]}'      #invalid index range
+    # f'\nprime_num_tuple[-2:-5] : {prime_num_tuple[-2:-5]}'  #invalid index range
+    f'\nprime_num_tuple[-5:-2] : {prime_num_tuple[-5:-2]}'
+    f'\nprime_num_tuple[2:] : {prime_num_tuple[2:]}'
+    f'\nprime_num_tuple[:4] : {prime_num_tuple[:4]}'
+    f'\nprime_num_tuple[-2:] : {prime_num_tuple[-2:]}'
+    f'\nprime_num_tuple[:-5] : {prime_num_tuple[:-2]}'
+    '\n')
+
+# d. Accessing a sub-sequences in a tuple/slicing but with a step
+print(f'prime_num_tuple[::2] : {prime_num_tuple[::2]}'
+    f'\nprime_num_tuple[::3] : {prime_num_tuple[::3]}'
+    f'\nprime_num_tuple[2:5:2] : {prime_num_tuple[2:5:2]}'
+    f'\nprime_num_tuple[-5:-2:2] : {prime_num_tuple[-5:-2:2]}'
+    '\n')
