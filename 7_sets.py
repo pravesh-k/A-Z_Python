@@ -58,3 +58,49 @@ print(f'empty_set_2 : {empty_set_2}'
     f'\nbool_set : {bool_set}'
     f'\nemp_det_set : {emp_det_set}'
     '\n')
+
+
+# 3. Accessing set elements
+'''
+**note 2: It is not possible to access items in a set by referring to an index or  
+          a key. This is due to the set being UNORDERED. Due to the same reason, 
+          we cannot change the set items but we can add more items to a set and 
+          remove items.
+'''
+
+
+# 4. Mutability in sets
+
+# adding items to a set
+fruit_set.add('mango')
+print(f'fruit_set : {fruit_set}\n')
+
+# adding items from one set to another set
+fruit_set_2 = {'dragon-fruit', 'strawberry'}
+fruit_set_2.update(fruit_set)
+print(f'fruit_set_2 : {fruit_set_2}\n')
+
+# adding items from any iterable to a set
+fruit_set_3 = {'dragon-fruit', 'strawberry'}
+fruit_set_3.update(['kiwi', 'grapes'])
+print(f'fruit_set_3 : {fruit_set_3}\n')
+
+# concatenation is not allowed for sets
+# veg_set = {'tomato', 'carrot'} + {'pumpkin', 'onion'}  #Raises TypeError: 
+                                                         # unsupported operand type
+
+# removing set items
+fruit_set_2.remove('dragon-fruit')
+print(f'fruit_set_2 : {fruit_set_2}\n')
+
+fruit_set_2.discard('cherry')
+print(f'fruit_set_2 : {fruit_set_2}\n')
+
+'''
+**note 3: Difference between remove() and discard() methods.
+          discard() method removes the element from the set only if the element is present in the set. If the element is not present in the set, then no error or exception is raised, whereas
+          remove() method removes the element from the set only if the element is present in the set, just as the discard() method does but If the element is not present in the set, then an error or exception is raised
+'''
+
+
+# 5. Methods of Sets
