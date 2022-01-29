@@ -25,7 +25,7 @@ empty_dict_1 = {}
 empty_dict_2 = dict()
 
 # dictionary with multiple key value pairs and values of different data types
-super_car = {
+car_dict = {
     "brand": "Ford",
     "model": "Mustang",
     "year": 1964,
@@ -33,4 +33,47 @@ super_car = {
     "EV": False
     }
 
+# creating dictionary using constructor
+emp_dict = dict([
+    ['name', 'Adam'], 
+    {'exp', 6}, 
+    ('dept', 'Sales'), 
+    ('designation', 'Lead')
+    ])
+
+# creating nested dictionary
+student_dict = {
+    'name': 'John',
+    'roll': 34,
+    'class': 8,
+    'books_issued': {
+        'english': {
+            'language': 1,
+            'literature': 2
+            },
+        'maths': 1,
+        'social': 3,
+        'science': 3
+        },
+    'section': 'B'
+    }
+
 # 2. Printing dictionaries
+
+print(f'empty_dict_1 : {empty_dict_1}\n'
+    f'\nempty_dict_2 : {empty_dict_2}\n'
+    f'\ncar_dict : {car_dict}\n'
+    f'\nemp_dict : {emp_dict}\n'
+    f'\nstudent_dict : {student_dict}\n'
+    '\n')
+
+# 3. Accessing dictionary items
+
+# a. Access the items of a dictionary by referring to its key name, inside square brackets
+print(f'\ncar_dict["year"] : {car_dict["year"]}\n'
+    f'\ncar_dict["color"] : {car_dict["color"]}\n'
+    f'\nstudent_dict["books_issued"] : {student_dict["books_issued"]}\n'
+    f'\nstudent_dict["books_issued"]["english"] : {student_dict["books_issued"]["english"]}\n'
+    f'\nstudent_dict["books_issued"]["english"]["literature"] : {student_dict["books_issued"]["english"]["literature"]}\n'
+    '\n')
+
