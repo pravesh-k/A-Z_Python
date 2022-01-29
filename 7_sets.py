@@ -104,3 +104,48 @@ print(f'fruit_set_2 : {fruit_set_2}\n')
 
 
 # 5. Methods of Sets
+
+# 1. Adds an element to the set
+#    syntax: a_set.add(value)
+
+'''Refer to line 74 for example'''
+
+# 2. Removes all the elements from the set
+#    syntax: a_set.clear()
+magic_num_set.clear()
+print(f'magic_num_set : {magic_num_set}\n')
+
+# 3. Returns a copy of the set
+#    syntax: a_set.copy()
+new_set = prime_num_set.copy()
+print(f'new_set : {new_set}\n')
+
+# 4. Returns a set containing the difference between two or more sets
+#    syntax: a_set.difference(b_set)
+diff_set_1 = fruit_set.difference(fruit_set_2)
+diff_set_2 = fruit_set_2.difference(fruit_set)
+print(f'diff_set_1 : {diff_set_1}'
+    f'\ndiff_set_2 : {diff_set_2}'
+    '\n')
+
+# 5. Removes the items in this set that are also included in another, specified set
+#    syntax: a_set.difference_update(b_set)
+fruit_set_2.difference_update(fruit_set)
+print(f'fruit_set_2 : {fruit_set_2}\n')
+
+# 6. Remove the specified item
+#    syntax: a_set.discard(value)
+
+'''Refer to line 96 for example'''
+
+# 7. Returns a set, that is the intersection of two or more other sets
+#    syntax: a_set.intersection(set1, set2 ... set_n)
+fruit_set_2.add('grapes')
+fruit_set_2.add('kiwi')
+intersect_set_1 = fruit_set_2.intersection(fruit_set_3)
+print(f'intersect_set_1 : {intersect_set_1}\n')
+
+# 8. Removes the items in this set that are not present in other, specified set(s)
+#    syntax: a_set.intersection_update(set1, set2 ... set_n)
+fruit_set_2.intersection(fruit_set_3)
+print(f'fruit_set_2 : {fruit_set_2}\n')
