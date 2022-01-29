@@ -9,6 +9,8 @@
 #   2. Printing tuples
 #   3. Accessing tuples elements
 #   4. Immutable behaviour check
+#   5. Operations on/with tuples
+#   6. Tuple built-in methods
 
 
 # 1. Creating tuples
