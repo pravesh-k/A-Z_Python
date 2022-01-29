@@ -149,3 +149,63 @@ print(f'intersect_set_1 : {intersect_set_1}\n')
 #    syntax: a_set.intersection_update(set1, set2 ... set_n)
 fruit_set_2.intersection(fruit_set_3)
 print(f'fruit_set_2 : {fruit_set_2}\n')
+
+# 9. Returns whether two sets have a intersection or not
+#    syntax: a_set.isdisjoint(b_set)
+#    If returns True: sets are disjoint, meaning no intersection present
+#    If returns False: sets are not disjoint, meaning intersection present
+print(f'fruit_set_2.isdisjoint(fruit_set_3) :{fruit_set_2.isdisjoint(fruit_set_3)}'
+    f'\nfruit_set.isdisjoint(fruit_set_3) :{fruit_set.isdisjoint(fruit_set_3)}'
+    '\n')
+
+
+# 10. Returns whether another set contains this set or not
+#     syntax: a_set.issubset(b_set)
+print(f'fruit_set_2.issubset(fruit_set_3) :{fruit_set_2.issubset(fruit_set_3)}'
+    f'\nfruit_set_3.issubset(fruit_set_2) :{fruit_set_3.issubset(fruit_set_2)}'
+    '\n')
+
+# 11. Returns whether this set contains another set or not
+#     syntax: a_set.issuperset(b_set)
+print(f'fruit_set_2.issuperset(fruit_set_3) :{fruit_set_2.issuperset(fruit_set_3)}'
+    f'\nfruit_set_3.issuperset(fruit_set_2) :{fruit_set_3.issuperset(fruit_set_2)}'
+    '\n')
+
+# 12. Removes last element from the set.
+#     syntax: a_set.pop()
+#     Note that sets are UNORDERED so expected item may not get popped out
+last_fruit = fruit_set.pop()
+print(f'last_fruit : {last_fruit}'
+    f'\nfruit_set : {fruit_set}'
+    '\n')
+
+# 13. Removes the specified element
+#     syntax: a_set.remove(value)
+
+'''Refer to line 92 for example'''
+
+# 14. Returns a set that contains all items from both set, but not the items that
+#     are present in both sets.
+#     syntax: a_set.symmetric_difference(b_set)
+sym_set_1 = fruit_set_3.symmetric_difference(fruit_set_2)
+sym_set_2 = fruit_set_2.symmetric_difference(fruit_set_3)
+print(f'sym_set_1 : {sym_set_1}'
+    f'\nsym_set_2 : {sym_set_2}'
+    '\n')
+
+# 15. Update this set with the symmetric differences from this set and another
+#     syntax: a_set.symmetric_difference_update(b_set)
+fruit_set_3.symmetric_difference_update(fruit_set_2)
+print(f'fruit_set_3 : {fruit_set_3}\n')
+
+# 16. Return a set that contains all items from the original set, and all items
+#     from the specified set(s).
+#     syntax: a_set.union(set1, set2, ..., setn)
+union_set = fruit_set.union(fruit_set_2, fruit_set_3)
+print(f'union_set : {union_set}\n')
+
+# 17. updates the current set, by adding items from another set (or any other 
+#     iterable).
+#     syntax: a_set.update(b_set)
+
+'''Refer to line 78 for example'''
