@@ -9,6 +9,10 @@
 
 # # Contents:
 #   1. Creating a dictionary
+#   2. Printing dictionaries
+#   3. Accessing dictionary items
+#   4. Changing values of keys
+#   5. Adding items to the dictionary
 
 # 1. Creating a dictionary
 
@@ -97,7 +101,9 @@ car_supply = car_dict.get('supply', False)
 print(f'car_supply : {car_supply}\n')
 
 car_body = car_dict.get('body')
-# here 'body' is passed as key but it is originally not present in the car_dict. By default 'None' is passed to the value argument of get() method, and so the this get query will return None.
+# here 'body' is passed as key but it is originally not present in the car_dict. 
+# By default 'None' is passed to the value argument of get() method, and so this 
+# get query will return None.
 print(f'car_body : {car_body}\n')
 
 # c. Accessing all the keys of the dictionary using keys() method.
@@ -129,3 +135,40 @@ print(f'car_value_list : {car_value_list}\n')
 
 car_item_list = car_dict.items()
 print(f'car_item_list : {car_item_list}\n')
+
+
+# 4. Changing values of keys
+
+# a. Changing the value of a specific item by referring to its key name.
+student_dict['name'] = 'Steve'
+student_dict['roll'] = 10
+student_dict['books_issued']['maths'] = 2
+student_dict['books_issued']['english']['language'] = 2
+print(f'student_dict : {student_dict}\n')
+
+# b. Using update() method to change the value of a key
+#    syntax: a_dict.update(iterable)
+#            where iterable a dictionary or an iterable object with key value 
+#            pairs, that will be inserted to the dictionary
+#    If the key provided in the iterable passed to the method isn't present in the 
+#    dict originally then it adds that item to the dict
+
+car_dict.update({'year': 1999})
+car_dict.update([('wheel_type', 'Alloy')])
+print(f'car_dict : {car_dict}\n')
+student_dict['books_issued'].update({'social': 1})
+print(f'student_dict : {student_dict}\n')
+
+
+# 5. Adding items to the dictionary
+
+# a. Add an item using a new index key and assigning a value to it.
+car_dict['seat_capacity'] = 5
+car_dict['vehicle_category'] = 'SUV'
+print(f'car_dict : {car_dict}\n')
+
+# b. Using update method to add new key-value pair to the dictionary
+'''Example of this operation is demonstrated in line 157'''
+
+
+# 6. 
