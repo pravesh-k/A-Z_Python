@@ -105,8 +105,13 @@ print(f'fruit_set_2 : {fruit_set_2}\n')
 
 '''
 **note 3: Difference between remove() and discard() methods.
-          discard() method removes the element from the set only if the element is present in the set. If the element is not present in the set, then no error or exception is raised, whereas
-          remove() method removes the element from the set only if the element is present in the set, just as the discard() method does but If the element is not present in the set, then an error or exception is raised
+          discard() method removes the element from the set only if the element is 
+          present in the set. If the element is not present in the set, then no 
+          error or exception is raised, whereas
+          
+          remove() method removes the element from the set only if the element is 
+          present in the set, just as the discard() method does but If the element 
+          is not present in the set, then an error or exception is raised
 '''
 
 
@@ -222,9 +227,14 @@ print(f'union_set : {union_set}\n')
 # 6. Frozen Set
 
 '''
-**note 4 The frozenset() is an inbuilt function in Python which takes an iterable object as input and makes them immutable. Simply it freezes the iterable objects and makes them unchangeable.
+**note 4 The frozenset() is an inbuilt function in Python which takes an iterable 
+object as input and makes them immutable. Simply it freezes the iterable objects 
+and makes them unchangeable.
 
-In Python, frozenset is the same as set except the frozensets are immutable which means that elements from the frozenset cannot be added or removed once created. This function takes input as any iterable object and converts them into an immutable object. The order of elements is not guaranteed to be preserved.
+In Python, frozenset is the same as set except the frozensets are immutable which 
+means that elements from the frozenset cannot be added or removed once created. 
+This function takes input as any iterable object and converts them into an 
+immutable object. The order of elements is not guaranteed to be preserved.
 '''
 
 # a. Creating a frozen set object
