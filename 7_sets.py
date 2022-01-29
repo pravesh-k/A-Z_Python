@@ -13,7 +13,9 @@
 #   1. Creating sets
 #   2. Printing sets
 #   3. Accessing sets elements
-
+#   4. Mutability in set
+#   5. Methods of Set
+#   6. Frozen Set
 
 # 1. Creating sets
 
@@ -66,10 +68,15 @@ print(f'empty_set_2 : {empty_set_2}'
           a key. This is due to the set being UNORDERED. Due to the same reason, 
           we cannot change the set items but we can add more items to a set and 
           remove items.
+
+          But the items of set can be accessed in a loop
+          example:
+            for each in fruit_set:
+                print(each, end=' ')
 '''
 
 
-# 4. Mutability in sets
+# 4. Mutability in set
 
 # adding items to a set
 fruit_set.add('mango')
@@ -103,24 +110,24 @@ print(f'fruit_set_2 : {fruit_set_2}\n')
 '''
 
 
-# 5. Methods of Sets
+# 5. Methods of Set
 
-# 1. Adds an element to the set
+# a. Add an element to the set
 #    syntax: a_set.add(value)
 
 '''Refer to line 74 for example'''
 
-# 2. Removes all the elements from the set
+# b. Remove all the elements from the set
 #    syntax: a_set.clear()
 magic_num_set.clear()
 print(f'magic_num_set : {magic_num_set}\n')
 
-# 3. Returns a copy of the set
+# c. Return a copy of the set
 #    syntax: a_set.copy()
 new_set = prime_num_set.copy()
 print(f'new_set : {new_set}\n')
 
-# 4. Returns a set containing the difference between two or more sets
+# d. Return a set containing the difference between two or more sets
 #    syntax: a_set.difference(b_set)
 diff_set_1 = fruit_set.difference(fruit_set_2)
 diff_set_2 = fruit_set_2.difference(fruit_set)
@@ -128,29 +135,30 @@ print(f'diff_set_1 : {diff_set_1}'
     f'\ndiff_set_2 : {diff_set_2}'
     '\n')
 
-# 5. Removes the items in this set that are also included in another, specified set
+# e. Remove the items in this set that are also included in another, specified set
 #    syntax: a_set.difference_update(b_set)
 fruit_set_2.difference_update(fruit_set)
 print(f'fruit_set_2 : {fruit_set_2}\n')
 
-# 6. Remove the specified item
+# f. Remove the specified item from the set
 #    syntax: a_set.discard(value)
 
 '''Refer to line 96 for example'''
 
-# 7. Returns a set, that is the intersection of two or more other sets
+# g. Returns a set, that is the intersection i.e. a set that contains the 
+#    similarity between two or more sets.
 #    syntax: a_set.intersection(set1, set2 ... set_n)
 fruit_set_2.add('grapes')
 fruit_set_2.add('kiwi')
 intersect_set_1 = fruit_set_2.intersection(fruit_set_3)
 print(f'intersect_set_1 : {intersect_set_1}\n')
 
-# 8. Removes the items in this set that are not present in other, specified set(s)
+# h. Remove the items in this set that are not present in other, specified set(s)
 #    syntax: a_set.intersection_update(set1, set2 ... set_n)
-fruit_set_2.intersection(fruit_set_3)
+fruit_set_2.intersection_update(fruit_set_3)
 print(f'fruit_set_2 : {fruit_set_2}\n')
 
-# 9. Returns whether two sets have a intersection or not
+# i. Return whether two sets have a intersection or not
 #    syntax: a_set.isdisjoint(b_set)
 #    If returns True: sets are disjoint, meaning no intersection present
 #    If returns False: sets are not disjoint, meaning intersection present
@@ -159,53 +167,80 @@ print(f'fruit_set_2.isdisjoint(fruit_set_3) :{fruit_set_2.isdisjoint(fruit_set_3
     '\n')
 
 
-# 10. Returns whether another set contains this set or not
-#     syntax: a_set.issubset(b_set)
+# j. Return whether another set contains this set or not
+#    syntax: a_set.issubset(b_set)
 print(f'fruit_set_2.issubset(fruit_set_3) :{fruit_set_2.issubset(fruit_set_3)}'
     f'\nfruit_set_3.issubset(fruit_set_2) :{fruit_set_3.issubset(fruit_set_2)}'
     '\n')
 
-# 11. Returns whether this set contains another set or not
-#     syntax: a_set.issuperset(b_set)
+# k. Return whether this set contains another set or not
+#    syntax: a_set.issuperset(b_set)
 print(f'fruit_set_2.issuperset(fruit_set_3) :{fruit_set_2.issuperset(fruit_set_3)}'
     f'\nfruit_set_3.issuperset(fruit_set_2) :{fruit_set_3.issuperset(fruit_set_2)}'
     '\n')
 
-# 12. Removes last element from the set.
-#     syntax: a_set.pop()
-#     Note that sets are UNORDERED so expected item may not get popped out
+# l. Remove last element from the set.
+#    syntax: a_set.pop()
+#    Note that sets are UNORDERED so expected item may not get popped out
 last_fruit = fruit_set.pop()
 print(f'last_fruit : {last_fruit}'
     f'\nfruit_set : {fruit_set}'
     '\n')
 
-# 13. Removes the specified element
-#     syntax: a_set.remove(value)
+# m. Remove the specified element
+#    syntax: a_set.remove(value)
 
 '''Refer to line 92 for example'''
 
-# 14. Returns a set that contains all items from both set, but not the items that
-#     are present in both sets.
-#     syntax: a_set.symmetric_difference(b_set)
+# n. Returns a set that contains all items from both set, but not the items that
+#    are present in both sets.
+#    syntax: a_set.symmetric_difference(b_set)
 sym_set_1 = fruit_set_3.symmetric_difference(fruit_set_2)
 sym_set_2 = fruit_set_2.symmetric_difference(fruit_set_3)
 print(f'sym_set_1 : {sym_set_1}'
     f'\nsym_set_2 : {sym_set_2}'
     '\n')
 
-# 15. Update this set with the symmetric differences from this set and another
-#     syntax: a_set.symmetric_difference_update(b_set)
+# o. Update this set with the symmetric differences from this set and another
+#    syntax: a_set.symmetric_difference_update(b_set)
 fruit_set_3.symmetric_difference_update(fruit_set_2)
 print(f'fruit_set_3 : {fruit_set_3}\n')
 
-# 16. Return a set that contains all items from the original set, and all items
-#     from the specified set(s).
-#     syntax: a_set.union(set1, set2, ..., setn)
+# p. Return a set that contains all items from the original set, and all items
+#    from the specified set(s).
+#    syntax: a_set.union(set1, set2, ..., setn)
 union_set = fruit_set.union(fruit_set_2, fruit_set_3)
 print(f'union_set : {union_set}\n')
 
-# 17. updates the current set, by adding items from another set (or any other 
-#     iterable).
-#     syntax: a_set.update(b_set)
+# q. Update the current set, by adding items from another set (or any other 
+#    iterable).
+#    syntax: a_set.update(b_set or iterable)
 
 '''Refer to line 78 for example'''
+
+
+# 6. Frozen Set
+
+'''
+**note 4 The frozenset() is an inbuilt function in Python which takes an iterable object as input and makes them immutable. Simply it freezes the iterable objects and makes them unchangeable.
+
+In Python, frozenset is the same as set except the frozensets are immutable which means that elements from the frozenset cannot be added or removed once created. This function takes input as any iterable object and converts them into an immutable object. The order of elements is not guaranteed to be preserved.
+'''
+
+# a. Creating a frozen set object
+empty_frozen_set = frozenset()
+direction_frozen_set = frozenset(['North', 'South', 'East', 'West'])
+num_frozen_set = frozenset((5, 4, 9, 8))
+veg_frozen_set = frozenset({'Yes', 'No', 'Maybe'})
+
+print(f'empty_frozen_set : {empty_frozen_set}'
+    f'\ndirection_frozen_set : {direction_frozen_set}'
+    f'\nnum_frozen_set : {num_frozen_set}'
+    f'\nveg_frozen_set : {veg_frozen_set}'
+    '\n')
+
+# b. Check Immutability
+# direction_frozen_set.add('center')        # Raises AttributeError
+# direction_frozen_set.remove('West')        # Raises AttributeError
+# direction_frozen_set.update(fruit_set)        # Raises AttributeError
+# direction_frozen_set[1] = 'corner'      # Raises Type Error
