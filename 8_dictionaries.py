@@ -77,3 +77,55 @@ print(f'\ncar_dict["year"] : {car_dict["year"]}\n'
     f'\nstudent_dict["books_issued"]["english"]["literature"] : {student_dict["books_issued"]["english"]["literature"]}\n'
     '\n')
 
+# b. Accessing value of the item with the specified key using get() method.
+#    syntax: a_dict.get(key, value)
+#            where value argument is optional and is useful when the key doesn't 
+#            exist in the dict, so the get() method returns the value argument
+#    This method returns the value associated to the key passed to the get() method
+
+car_color = car_dict.get('color')
+print(f'car_color : {car_color}\n')
+
+car_brand = car_dict.get('brand', 'Honda')      
+# here 'Honda' is passed to value but it won't populate on output because brand 
+# key exists in the car_dict dictionary
+print(f'car_brand : {car_brand}\n')
+
+car_supply = car_dict.get('supply', False)
+# here 'False' is passed to value and it will be returned because key supply 
+# doesn't exists in the car_dict dictionary
+print(f'car_supply : {car_supply}\n')
+
+car_body = car_dict.get('body')
+# here 'body' is passed as key but it is originally not present in the car_dict. By default 'None' is passed to the value argument of get() method, and so the this get query will return None.
+print(f'car_body : {car_body}\n')
+
+# c. Accessing all the keys of the dictionary using keys() method.
+#    syntax: a_dict.keys()
+#    This method returns the view object. The view object contains the keys of the 
+#    dictionary, as a list.
+#    The view object will reflect any changes (add item, remove item) done to the
+#    dictionary.
+
+car_key_list = car_dict.keys()
+print(f'car_key_list : {car_key_list}\n')
+
+# d. Accessing all the values of the dictionary using values() method.
+#    syntax: a_dict.values()
+#    This method returns the view object. The view object contains the values of 
+#    the dictionary, as a list.
+#    The view object will reflect any changes (add item, update value, remove 
+#    item) done to the dictionary.
+
+car_value_list = car_dict.values()
+print(f'car_value_list : {car_value_list}\n')
+
+# e. Accessing all the items of the dictionary using items() method.
+#    syntax: a_dict.items()
+#    This method returns the view object. The view object contains the key-value 
+#    pairs of the dictionary, as tuples in a list.
+#    The view object will reflect any changes (add item, update value, remove 
+#    item) done to the dictionary.
+
+car_item_list = car_dict.items()
+print(f'car_item_list : {car_item_list}\n')
