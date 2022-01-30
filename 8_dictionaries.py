@@ -211,3 +211,19 @@ print(f'copy_car_dict : {copy_car_dict}\n')
 #    syntax: del a_dict
 del copy_car_dict
 # print(f'copy_car_dict : {copy_car_dict}\n')       # Raises NameError
+
+# 7. Copying dictionary
+'''
+**note 2: A dictionary can't be copied by typing dict1 = dict2, because dict2 will 
+only be a reference to dict1, and changes made in dict1 will automatically also be 
+made in dict2
+'''
+
+# a. Using copy() method
+#    syntax: copy_dict = a_dict.copy()
+copy_car_dict = car_dict.copy()
+print(f'copy_car_dict : {copy_car_dict}\n')
+
+# b. Using built-in function dict()
+#    syntax: copy_dict = dict(a_dict)
+'''For example, refer to line 186'''
