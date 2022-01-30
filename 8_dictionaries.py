@@ -13,6 +13,9 @@
 #   3. Accessing dictionary items
 #   4. Changing values of keys
 #   5. Adding items to the dictionary
+#   6. Removing specific items, removing all items and deleting dictionary
+#   7. Copying dictionary
+
 
 # 1. Creating a dictionary
 
@@ -171,4 +174,40 @@ print(f'car_dict : {car_dict}\n')
 '''Example of this operation is demonstrated in line 157'''
 
 
-# 6. 
+# 6. Removing specific items, removing all items and deleting dictionary
+
+# a. Remove specific items from a dictionary
+#   i. Using pop() method
+#      syntax: a_dict.pop(keyname, defaultvalue), returns the popped item's value,
+#              where keyname is required to remove the desired item, and
+#              defaultValue is an optional paramter which is a value to return if 
+#              the specified key doesn't exist.
+
+copy_car_dict = dict(car_dict)
+copy_car_model = copy_car_dict.pop('model')
+print(f'copy_car_model : {copy_car_model}'
+    f'\ncopy_car_dict : {copy_car_dict}'
+    '\n')
+
+#   ii. Using popitem() method
+#       syntax: a_dict.popitem(), returns the last inserted item as a tuple
+
+copy_car_last_item = copy_car_dict.popitem()
+print(f'copy_car_last_item : {copy_car_last_item}'
+    f'\ncopy_car_dict : {copy_car_dict}'
+    '\n')
+
+#   iii. Using del keyword
+#        syntax: del a_dict['keyname']
+del copy_car_dict['wheel_type']
+print(f'copy_car_dict : {copy_car_dict}\n')
+
+# b. Remove all items from a dictionary using clear() method
+#    syntax: a_dict.clear()
+copy_car_dict.clear()
+print(f'copy_car_dict : {copy_car_dict}\n')
+
+# c. Deleting a dictionary using del keyword
+#    syntax: del a_dict
+del copy_car_dict
+# print(f'copy_car_dict : {copy_car_dict}\n')       # Raises NameError
