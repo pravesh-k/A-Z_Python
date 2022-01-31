@@ -94,6 +94,10 @@ x = [1, 2, 3, 5, 9]
 if 9 in x:
     print('Present Sir!\n')
 
+# Example 10: Use of if statement in list comprehension
+squares = [x*x for x in [-5, 3, 8, -9, 2, 7, 0] if x >= 0]
+print(f'squares : {squares}\n')
+
 
 # 2. 'else' statement: 
 '''
@@ -102,9 +106,9 @@ if 9 in x:
 
 # Example 1:
 if 5 < 4:
-    print('Lorem\n')
+    print('\nLorem\n')
 else:
-    print('Ipsum\n')
+    print('\nIpsum\n')
 
 # Example 2: multiple if-else statements and block outside if-else statements
 if 30 > 20:
@@ -171,3 +175,7 @@ else:
         print('5 Present Sir!\n')
     else:
         print('10 and 5 not present\n')
+
+# Example 10: Use of if-else statement in list comprehension
+raised = [x*x if x <= 0 else x**3 for x in [-5, 3, 8, -9, 2, 7, 0]]
+print(f'raised : {raised}\n')
