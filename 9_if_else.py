@@ -80,3 +80,62 @@ if 'd' > 'c' and 5 > 2:
     if 10 > 4: print('World')
     print('Bye!\n')
 
+
+# 2. 'else' statement: 
+'''
+**note 4: Else is used with if statement to execute a block of code when the condition is false. 
+'''
+
+# Example 1:
+if 5 < 4:
+    print('Lorem\n')
+else:
+    print('Ipsum\n')
+
+# Example 2: multiple if-else statements and block outside if-else statements
+if 30 > 20:
+    print('Apple')
+else:
+    print('Banana')
+if 10 > 20:
+    print('Cherry')
+else:
+    print('Dragon-fruit')
+print('Onion is not fruit\n')
+
+# Example 3:
+val1 = 15
+val2 = 15
+if val1 < val2:
+    print('Easy\n')
+else:
+    print('Difficult\n')
+
+# Example 4: Also called short hand if statement, helpful while executing single 
+# line statements inside if block
+print('Sun\n') if 'Sun' < 'Moon' else print('Moon\n')
+
+# Example 5: multi line code inside if-else block
+if 'a' > 'b':
+    print('line.. 1')
+    print('line.. 2')
+    print('line.. 3\n')
+else:
+    print('line.. a')
+    print('line.. z\n')
+
+# Example 6: Nested if-else statements
+if 'd' < 'c':
+    print('Stage..1')
+else:
+    if 100 == 200:
+        print('Stage..2')
+    else:
+        if False == False:
+            print('Stage..3')
+        else:
+            print('Stage..4')
+
+# Example 7: condensing code in above example using short-hand if statemente
+
+print('Stage..1') if 'd' < 'c' else print('Stage..2') if 100 == 200 else print('Stage..3') if False == False else print('Stage..4')
