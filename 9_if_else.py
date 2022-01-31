@@ -38,7 +38,7 @@
 if 5 > 4:
     print('5 is greater than 4\n')
 
-# Example 2:
+# Example 2: multiple if statements and block outside if statements
 if 30 > 20:
     print('30 is greater than 20\n')
 if 10 > 20:
@@ -54,3 +54,29 @@ if val1 <= val2:
 # Example 4: Also called short hand if statement, helpful while executing single 
 # line statements inside if block
 if 'Hello' < 'World': print('Hello\n')
+
+# Example 5: multi line code inside if block
+if 'a' < 'b':
+    print('line.. 1')
+    print('line.. 2')
+    print('line.. 3\n')
+
+# Example 6: Nested if statements
+if 'd' > 'c':
+    if 5 > 2:
+        print('Hello')
+        if 3 > 4:
+            print('Earth')
+        if 10 > 4:
+            print('World')
+    print('Bye!\n')
+
+# Example 7: condensing code in above example using logical operators along with 
+#            conditional operators and short-hand if statemente
+
+if 'd' > 'c' and 5 > 2:
+    print('Hello')
+    if 3 > 4: print('Earth')
+    if 10 > 4: print('World')
+    print('Bye!\n')
+
