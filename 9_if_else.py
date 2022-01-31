@@ -93,7 +93,7 @@ if y is x:
 x = [1, 2, 3, 5, 9]
 if 9 in x:
     print('Present Sir!\n')
-    
+
 
 # 2. 'else' statement: 
 '''
@@ -153,3 +153,21 @@ else:
 # Example 7: condensing code in above example using short-hand if statemente
 
 print('Stage..1') if 'd' < 'c' else print('Stage..2') if 100 == 200 else print('Stage..3') if False == False else print('Stage..4')
+
+# Example 8: using identity operator in generating conditions for if-else statement
+x = 10
+y = -x
+if y is x:
+    print('y is x\n')
+else:
+    print('y is not x\n')
+
+# Example 9: using membership operator in generating conditions for if statement
+x = [1, 2, 3, 5, 9]
+if 10 in x:
+    print('10 Present Sir!\n')
+else:
+    if 5 in x:
+        print('5 Present Sir!\n')
+    else:
+        print('10 and 5 not present\n')
