@@ -35,6 +35,9 @@
 '''
 
 # Example 1:
+from copy import copy
+
+
 if 5 > 4:
     print('5 is greater than 4\n')
 
@@ -80,6 +83,17 @@ if 'd' > 'c' and 5 > 2:
     if 10 > 4: print('World')
     print('Bye!\n')
 
+# Example 8: using identity operator in generating conditions for if statement
+x = 10
+y = x
+if y is x:
+    print('y is x\n')
+
+# Example 9: using membership operator in generating conditions for if statement
+x = [1, 2, 3, 5, 9]
+if 9 in x:
+    print('Present Sir!\n')
+    
 
 # 2. 'else' statement: 
 '''
