@@ -250,3 +250,31 @@ elif 'h' in 'hello':
     print('h Present Sir!\n')
 else:
     print('10 and hello not present\n')
+
+# Example 8: using logical operators with elif
+x = 'F'
+if x >= 'a' and x <= 'z':
+    print('x is in lower case\n')
+elif x >= 'A' and x <= 'Z':
+    print('x is in upper case\n')
+else:
+    print('x is unknown')
+
+# Example 9: pass statement
+'''
+**note 6: if statements cannot be empty, but if for some reason an there is an if
+ statement with no content, put in the pass statement to avoid getting an error.
+
+pass does nothing, it is simply a null statement. The interpreter does not ignore
+ a pass statement, but nothing happens and the statement results into no
+ operation. The pass statement is useful when implementation of a function is not
+ yet ready but it will be implemented in the future.
+ '''
+
+# no output generated with the below code
+if 'a' < 'b':
+    pass
+elif 1 > 0:
+    pass
+else:
+    pass
