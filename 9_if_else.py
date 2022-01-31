@@ -171,11 +171,82 @@ x = [1, 2, 3, 5, 9]
 if 10 in x:
     print('10 Present Sir!\n')
 else:
-    if 5 in x:
-        print('5 Present Sir!\n')
+    if 'h' in 'hello':
+        print('h Present Sir!\n')
     else:
-        print('10 and 5 not present\n')
+        print('10 and hello not present\n')
 
 # Example 10: Use of if-else statement in list comprehension
 raised = [x*x if x <= 0 else x**3 for x in [-5, 3, 8, -9, 2, 7, 0]]
 print(f'raised : {raised}\n')
+
+
+# 3. 'elif' statement: 
+'''
+**note 5: Elif is a condensed way to write else-if statement, i.e. it clubs the two statements. 
+'''
+
+# Example 1:
+if 5 < 4:
+    print('\nLorem\n')
+elif 1 > 0:
+    print('\nIpsum\n')
+
+# Example 2: multiple if-elif statements and block outside if-elif statements
+if 30 > 20:
+    print('Apple')
+elif 'z' > 'a':
+    print('Banana')
+if 10 > 20:
+    print('Cherry')
+elif 'u' > 'e':
+    print('Dragon-fruit')
+print('Onion is not fruit\n')
+
+# Example 3: elif with else
+val1 = 15
+val2 = 15
+if val1 < val2:
+    print('Easy\n')
+elif val1 > val2:
+    print('Difficult\n')
+else:
+    print('Tough\n')
+
+# Example 4: multi line code inside if-else block
+if 'a' > 'b':
+    print('line.. 1')
+    print('line.. 2')
+    print('line.. 3\n')
+elif 2*2 > 1*1:
+    print('line.. a')
+    print('line.. z\n')
+
+# Example 5: Nested if-else statements
+if 'd' < 'c':
+    print('Stage..1')
+elif 100 == 200:
+    print('Stage..2')
+elif False == False:
+    print('Stage..3')
+else:
+    print('Stage..4')
+
+# Example 6: using identity operator in generating conditions for if-else statement
+x = 10
+y = -x
+if y is x:
+    print('y is x\n')
+elif y == -10:
+    print('y is not x and y is = -10\n')
+else:
+    print('y is unknown\n')
+
+# Example 7: using membership operator in generating conditions for if statement
+x = [1, 2, 3, 5, 9]
+if 10 in x:
+    print('10 Present Sir!\n')
+elif 'h' in 'hello':
+    print('h Present Sir!\n')
+else:
+    print('10 and hello not present\n')
