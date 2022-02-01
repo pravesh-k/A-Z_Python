@@ -70,6 +70,30 @@ while index < len(welcome):
 		
 	print(welcome[index], end=" ")
 	index += 1
+print()
+
+# b. break statement: break statement brings control out of the loop.
+# Example 1:
+count = 0
+while count < 3:
+    count += 1
+    print('\nAmerican')
+    break
+    print('Non-American')     # this line is never executed due to break statement
+print()
+
+# Example 2: break the loop as soon as 'o' is found
+welcome = 'HelloFolks,WelcomeToTheWhileLoop'
+index = 0
+
+while index < len(welcome):
+	if welcome[index] == 'o':
+		index += 1
+		break
+		
+	print(welcome[index], end=" ")
+	index += 1
+print()
 
 
 # 4. While loop with else
