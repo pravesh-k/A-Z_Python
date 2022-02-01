@@ -140,3 +140,31 @@ while i < len_of_note:
     i += 2
 
 print('\n')
+
+# b. while loop with lists
+# Example 1:
+lst = ['a', 2, 'Hi', True, 3, 6, 9, 12]
+i = 0
+len_of_lst = len(lst)
+while i < len_of_lst:
+    print(lst[i], end=" > ")
+    i += 1
+
+print('\n')
+
+# Example : while loop on list of lists
+lst = [['a', 2, 'Hi'], [2, 3, 5, 7, 11]]
+i = 0
+len_of_lst = len(lst)
+while i < len_of_lst:
+    j = 0
+    item = lst[i]
+    len_of_item = len(lst[i])
+    
+    while j < len_of_item:
+        print(item[j], end=" > ")
+        j += 1
+    print()
+    i += 1
+
+print()
