@@ -48,6 +48,29 @@ print()
 
 # 3. Loop Control Statements
 
+# a. continue statement: continue statement returns the control to the beginning 
+# of the loop.
+# Example 1
+count = 0
+while count < 3:
+    count += 1
+    print('Indian')
+    continue
+    print('Non-Indian')     # this line is never executed due to conitnue statement
+print()
+
+# Example 2: print all letters except 'l' and 'o'
+welcome = 'HelloFolks,WelcomeToTheWhileLoop'
+index = 0
+
+while index < len(welcome):
+	if welcome[index] == 'l' or welcome[index] == 'o':
+		index += 1
+		continue
+		
+	print(welcome[index], end=" ")
+	index += 1
+
 
 # 4. While loop with else
 
