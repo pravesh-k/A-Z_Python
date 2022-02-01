@@ -124,6 +124,19 @@ while j < 30:
     break
 else:       # this else block will never be executed due to the break in while
     print('Otherwise\n')
+print()
 
 
 # 5. While loop on different data structures
+
+# a. while loop with strings
+'''an example can be found in section 3.a.Example 2'''
+# Example 1:
+note = 'Hello Developers'
+i = 0
+len_of_note = len(note)
+while i < len_of_note:
+    print(note[i], end=", ")
+    i += 2
+
+print('\n')
