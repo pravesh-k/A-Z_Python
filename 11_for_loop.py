@@ -168,3 +168,64 @@ cubes = [x**3 for x in range(10) if x % 2 == 0]
 print(f'cubes : {cubes}\n')
 
 
+# 4. Loop Control Statements
+
+# a. continue statement: continue statement returns the control to the beginning 
+# of the loop.
+# Example 1
+for i in range(5):
+    print('Indian')
+    continue
+    print('Non-Indian')     # this line is never executed due to conitnue statement
+print()
+
+# Example 2: print all letters except 'l' and 'o'
+welcome = 'HelloFolks,WelcomeToTheWhileLoop'
+for letter in welcome:
+	if letter == 'l' or letter == 'o':
+		continue
+	print(letter, end=" ")
+print()
+
+# b. break statement: break statement brings control out of the loop.
+# Example 1:
+for i in range(3):
+    print('\nAmerican', i)
+    break
+    print('Non-American', i)     # this line is never executed due to break statement
+print()
+
+# Example 2: break the loop as soon as 'o' is found
+welcome = 'HelloFolks,WelcomeToTheWhileLoop'
+for letter in welcome:
+	if letter == 'o':
+		break
+		
+	print(letter, end=" ")
+print('\n')
+
+
+# 5. for loop with else
+# The else block just after for is executed only when the loop is NOT terminated 
+# by a break statement
+
+'''
+syntax:
+for var in iterable:
+    statement(s)
+else:
+    statement(s)
+'''
+
+# Example 1: simple for-else loop
+for i in range(1, 4):
+	print(i)
+else:                   # Executed because no break in for
+	print("No Break\n")
+
+# Example 2: for-else loop along with break statement
+for i in range(1, 4):
+	print(i)
+	break
+else:                   # Not executed as there is a break
+	print("No Break")
