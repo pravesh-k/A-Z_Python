@@ -18,8 +18,7 @@ while expression:
 #   2. Single statement while block
 #   3. Loop Control Statements
 #   4. While loop with else
-#   5. Sentinel control statement
-#   6. While loop on different data structures
+#   5. While loop on different data structures
 
 
 # 1. While loop
@@ -93,13 +92,38 @@ while index < len(welcome):
 		
 	print(welcome[index], end=" ")
 	index += 1
-print()
+print('\n')
 
 
 # 4. While loop with else
+# While loop is only executed when the condition is true but when the condition is 
+# false, else clause is executed. If there is a break statement in the loop, or if 
+# an exception is raised, else block is not executed.
+
+'''
+syntax:
+while expression:
+    statement(s)
+else:
+    statement(s)
+'''
+
+# Example 1: simple while-else loop
+i = 0
+while i < 2:
+    print(f'i = {i}')
+    i += 1
+else:       # after the condition in while loop is false, this block is executed
+    print('Otherwise\n')
+
+# Example 2: while-else loop with break statement
+j = 1
+while j < 30:
+    print(f'j = {j}')
+    j += 1
+    break
+else:       # this else block will never be executed due to the break in while
+    print('Otherwise\n')
 
 
-# 5. Sentinel control statement
-
-
-# 6. While loop on different data structures
+# 5. While loop on different data structures
