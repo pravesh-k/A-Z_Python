@@ -152,7 +152,7 @@ while i < len_of_lst:
 
 print('\n')
 
-# Example : while loop on list of lists
+# Example 2: while loop on list of lists
 lst = [['a', 2, 'Hi'], [2, 3, 5, 7, 11]]
 i = 0
 len_of_lst = len(lst)
@@ -160,7 +160,7 @@ while i < len_of_lst:
     j = 0
     item = lst[i]
     len_of_item = len(lst[i])
-    
+
     while j < len_of_item:
         print(item[j], end=" > ")
         j += 1
@@ -168,3 +168,47 @@ while i < len_of_lst:
     i += 1
 
 print()
+
+# c. while loop with tuples
+# Example 1:
+direction_tuple = ('North', 'South', 'East', 'West', 'Center')
+i = 0
+len_of_direction_tuple = len(direction_tuple)
+while i < len_of_direction_tuple:
+    print(direction_tuple[i], end=" > ")
+    i += 1
+
+print('\n')
+
+'''for tuple of tuples, while loop can be implemented as in list of lists'''
+
+# d. while loop with sets
+'''**note 1:
+Since set objects are UNORDERED we can access it via indexes thus implementing while loop for set object is not possible but other looping methods like for-loop can be implemented with sets
+'''
+
+# e. while loop with dictionaries
+# Example 1:
+car_dict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "color": ['Red', 'Blue', 'White'],
+    "EV": False
+    }
+
+# len_of_car_dict = len(car_dict)
+# i = 0
+# while i < len_of_car_dict:
+#     print(car_dict[i], end=" | ")
+#     i += 1
+'''
+**note 2:
+the above piece of code won't work as dict accepts keynames inside square 
+brackets and not indexes
+Thus we can only iterate through the list view of keys or values of the 
+dictionary, i.e. first we have to typecast the view of dict.keys() and 
+dict.values() and dict.items() to list type objects, then only we can implement 
+while loop. This means there is no way to implement while loop directly on 
+dictionary objects.
+'''
