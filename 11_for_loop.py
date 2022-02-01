@@ -19,9 +19,9 @@ for var in iterable:
 
 # # Content:
 #   1. for-loop on different iterable data structures
-#   2. Single statement for loops
-#   3. Loop Control Statements
-#   4. range function
+#   2. range function
+#   3. Single statement for loops
+#   4. Loop Control Statements
 #   5. While loop with else
 
 
@@ -107,4 +107,64 @@ print()
 for each in car_dict:
     print(car_dict[each])
 print()
+
+
+# 2. range function:
+'''
+**note 1: range() is a built-in function that is used when a user needs to perform 
+an action a specific number of times. The range() function is used to generate a 
+sequence of numbers. Depending on how many arguments user is passing to the 
+function, user can decide where that series of numbers will begin and end as well 
+as how big the difference will be between one number and the next. range() 
+function takes mainly three arguments. 
+
+    start: integer starting from which the sequence of integers is to be returned
+    stop: integer before which the sequence of integers is to be returned. 
+    The range of integers end at stop - 1.
+    step: integer value which determines the increment between each integer in the
+    sequence 
+    
+    syntax:
+    variable = range(start, stop, step)
+    '''
+
+# Example 1: for loop with range() but with only 1 argument passed to range().
+for i in range(5):
+    print(i, end=", ")
+print('\n')
+
+# Example 2: for loop with range() with 2 arguments passed to range()
+for j in range(2, 8):
+    print(j, end=", ")
+print('\n')
+
+# Example 3: for loop with range() with 3 arguments passed to range()
+for k in range(0, 15, 3):
+    print(k, end=", ")
+print('\n')
+
+# Example 4: using range() to iterate through lists via indexes
+lst2 = [2, 8, 15, 74, 100]
+for i in range(len(lst2)):
+    print(lst2[i], end='" ')
+print('\n')
+
+# Example 5: using range() to iterate through tuple via indexes
+tpl2 = ('A', 'E', 'I', 'O', 'U')
+for i in range(len(tpl2)):
+    print(tpl2[i], end='! ')
+print('\n')
+
+'''note that set and dictionary objects can not be accesses via indexes'''
+
+# 3. Single statement for-loops
+
+# Example 1: single-line for loop
+for i in range(4): print(i, end='$ '); print('=Rs. ', 74*i)
+print()
+
+# Example 2: list comprehension for list creation
+cubes = [x**3 for x in range(10) if x % 2 == 0]
+print(f'cubes : {cubes}\n')
+
 
