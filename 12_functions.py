@@ -82,12 +82,10 @@ An argument is the value that is sent to the function when it is called.
 #                       that argument.
 # Example 1:
 def my_func(x, y=50):
-    print(f'x is {x}')
-    print(f'y is {y}\n')
+    print(f'x is {x} and y is {y}\n')
 
 my_func(10)
 my_func(10, 20)
-my_func(y = 10, x = 20)
 
 '''
 ** note 2: 
@@ -98,16 +96,37 @@ def func_2(a, b=10, c):     # SyntaxError: c can't not accessed
     statement(s)
 '''
 
+# Example 2: 
 def my_func_2(a, b=16, c=25):
-    print(f'a is {a}')
-    print(f'b is {b}')
-    print(f'c is {c}\n')
+    print(f'a is {a} and b is {b} and c is {c}\n')
 
 my_func_2(9)
 my_func_2(9, 36)
 my_func_2(9, 64, 81)
-my_func_2(9, c=81)
-my_func_2(c=81, a=100)
+
+# b. Keyword arguments: The idea is to allow the caller to specify the argument 
+#                       name with values so that caller does not need to remember 
+#                       the order of parameters. 
+# Example 1:
+def name_of_childs(child1, child2, child3):
+    print(f'child1: {child1}, child2: {child2} and child3: {child3}\n')
+
+name_of_childs(child1='Adam', child2='Bob', child3='Chan')
+name_of_childs(child2='Adam', child3='Bob', child1='Chan')
+
+# Example 2:
+def name_of_parents(parent1, parent2, parent3='James'):
+    print(f'parent1: {parent1}, parent2: {parent2} and parent3: {parent3}\n')
+
+name_of_parents(parent2='Andrew', parent1='Freddy')
+name_of_parents(parent2='Andrew', parent3='Olivia', parent1='Freddy')
+
+# c. Variable arguments: In Python, variable number of arguments can be passed to
+#                        a function using special symbols i.e. if the number of 
+#                        arguments are not known that will be passed to the 
+#                        function, we can use the special symbols(* and **).
+#                        Thus, also known as, Arbitrary Arguments and Arbitrary 
+#                        Keyword Arguments.
 
 
 # 4. Docstring
