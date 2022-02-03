@@ -128,6 +128,45 @@ name_of_parents(parent2='Andrew', parent3='Olivia', parent1='Freddy')
 #                        Thus, also known as, Arbitrary Arguments and Arbitrary 
 #                        Keyword Arguments.
 
+# i. Variable length non-keywords argument (denoted by *args):
+# Example 1:
+def list_of_students(*args):
+    for arg in args:
+        print(arg, end=" ")
+    print('\n')
+
+list_of_students('Brad', 'Rohan', 'Jack')
+list_of_students('Brad', 'Rohan', 'Jack', 'Dan')
+
+# Example 2:
+def list_of_objects(*args):
+    for arg in args:
+        print(arg, end=" ")
+    print('\n')
+
+list_of_objects('Henry', 15, ['black', 'red'], True)
+list_of_objects(2, 4, 6, 8)
+
+# ii. Variable length keyword arguments (denoted by **kwargs):
+def country_capital(**kwargs):
+    for keyname, value in kwargs.items():
+        print(f'keyname={keyname}: value={value}')
+    print()
+
+country_capital(india='delhi', england='london', france='paris')
+country_capital(india='', england='london')
+
+# iii. employing *args and **kwargs together
+def employee(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
+    for keyname, value in kwargs.items():
+        print(f'key={keyname}: value={value}')
+    print()
+    
+employee(101, '45D', 'Sales', first_name='Iaan', last_name='Jobs', salary=150000)
+
 
 # 4. Docstring
 
