@@ -22,6 +22,7 @@ def function_name(parameters):
 #   4. Docstring
 #   5. return statement
 #   6. Pass by Reference
+#   7. Function within function
 
 
 # 1. Creating and Calling a function
@@ -341,11 +342,44 @@ def swap_2(x, y):
 a, b = 10, 15
 print(f'a = {a} and b = {b}')
 a, b = swap_2(a, b)
-print(f'after passing to swap_2 function, a = {a} and b = {b}')
+print(f'after passing to swap_2 function, a = {a} and b = {b}\n')
 
 # in the above example, the values of a and b are swapped successfully using the 
 # return statement to return the changes in x and y arguments, and then the return 
 # value of swap_2 function is assigned to the objects a and b, thus changing the 
 # original values of a and b as well there memory address are changed to the 
 # address of the variables x and y which are returned and assigned to original 
-# objects a and b
+# objects a and b.
+
+
+# 7. Function within function
+'''
+**note 5: A function that is defined inside another function is known as the 
+'inner function' or 'nested function'. Nested functions are able to access 
+variables of the enclosing scope. These functions are used so that they can be 
+protected from everything happening outside the function.
+'''
+
+# Example 1:
+def func_top():
+    msg = 'Welcome to the world of nesting'
+
+    def nest_func_1():
+        print(f'msg: {msg}\n')
+
+    nest_func_1()
+
+func_top()
+
+# Example 2:
+def add_100(var):
+    var += 100
+
+    def add_50(var):
+        var += 50
+        return var
+    
+    return add_50(var)
+
+num = 30
+print(f'passing num to add_100 func returns: {add_100(num)}\n')
