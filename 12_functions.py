@@ -216,7 +216,7 @@ def prod_of_nums(*args):
 print(prod_of_nums.__doc__,'\n')
 result = prod_of_nums(2, 3, 4)
 print(f'prod_result = {result}')
-print(f'prod_result = {prod_of_nums(14, 9)}')
+print(f'prod_result = {prod_of_nums(14, 9)}\n')
 
 # Example 2:
 def is_even(val):
@@ -224,7 +224,128 @@ def is_even(val):
     return True if val%2==0 else False
 
 print(f'is 11 even: {is_even(11)}')
-print(f'is 312100 even: {is_even(312100)}')
+print(f'is 312100 even: {is_even(312100)}\n')
 
 
-# 6. Pass by Reference
+# 6. Pass by Object Reference
+'''
+**note 4: Pass by value: In pass-by-value, the function receives a copy of the  
+    argument objects passed to it by the caller, stored in a new location in 
+    memory. Values of parameter are passed to the function, if any kind of change 
+    done to those parameters inside the function, those changes not reflected back 
+    in your actual parameters.
+    
+    WHEREAS in,
+    
+    Pass by Reference: In pass-by-reference, the function receives reference to 
+    the argument objects passed to it by the caller, both pointing to the same 
+    memory location. The reference of parameters is passed to the function. If any 
+    changes made to those parameters inside function those changes are get 
+    reflected back to your actual parameters.
+    
+    BUT,
+    
+    In Python 'neither' of these two concepts are applicable, rather the values 
+    are sent to functions by means of object reference.
+
+    SO,
+
+    Pass by object reference: In Python, (almost) everything is an object. 
+    "Variables" in Python are more properly called "Names". Likewise, "assignment" 
+    is really the binding of a name to an object. Each binding has a scope that 
+    defines its visibility, usually the block in which the name originates.
+
+    In Python,Values are passed to function by object reference.
+    
+    If object is immutable(not modifiable) than the modified value is not available outside the function.
+    
+    If object is mutable (modifiable) than modified value is available outside the function.
+'''
+
+# Example 1: List is a mutable object, when passed to func and performed any 
+#            changes to it, it is reflected in the original object
+def test_func(var):
+    print(f'memory address of the var argument: {id(var)}')
+    var[0] = 15
+
+lst = [9, 2, 7, 8, 1]
+print(f'memory address of lst object: {id(lst)}')
+print(f'lst before passing to test_func: {lst}')
+test_func(lst)
+print(f'lst after passing to test_func: {lst}\n')
+
+# in the above case it can be seen that the lst object and var argument has same 
+# memory address
+
+# Example 2: When list object passed to the function is completely assigned a new 
+#            list value, then it's address changes and it is actually not 
+#            reflected in the original object which was passed to the function as 
+#            an argument.
+
+def test_func_2(var):
+    print(f'memory address of the var argument: {id(var)}')
+    var = [10, 20, 30]
+    print(f'memory address of the var after replaced with a new list: {id(var)}')
+
+lst2 = [1, 2, 3, 4]
+print(f'memory address of the lst2 object: {id(lst2)}')
+print(f'lst2 before passing to test_func_2: {lst2}')
+test_func_2(lst2)
+print(f'lst2 after passing to test_func_2: {lst2}\n')
+
+# in the above case it can be seen that the lst2 object and var argument has same 
+# memory address but after the value of the var object is replaced with a new list 
+# inside the function, the reference of var to the lst2 object is broken and a new 
+# memory block is assigned to the var object inside the function. Thus value of 
+# lst2 object remains unchanged.
+
+# Example 3: When a immutable object is passed to a function, and it is modified, 
+#            the reference to the original object pass is broken as well.
+
+def test_func_3(var):
+    print(f'memory address of the var argument: {id(var)}')
+    var = 100
+    print(f'memory address of the var after assigning a new numeric value: {id(var)}')
+
+num = 50
+print(f'memory address of the num object: {id(num)}')
+print(f'num before passing to test_func_3: {num}')
+test_func_3(num)
+print(f'num after passing to test_func_3: {num}\n')
+
+# Example 4: Swap function
+def swap_1(x, y):
+    print(f'x = {x} and y = {y}')
+    x, y = y, x
+    print(f'after swapping, x = {x} and y = {y}')
+
+a, b = 10, 15
+print(f'a = {a} and b = {b}')
+swap_1(a, b)
+print(f'after passing to swap_1 function, a = {a} and b = {b}\n')
+
+# in the above example we can see that swap_1 function didn't do any changes to 
+# the objects a, b even if the the x, y arguments seem to have swapped the values 
+# with each other. This happened due to the fact that the reference to the 
+# objects, a and b are broken as soon as the values of x and y are changed.
+
+# Example 5: return statement can be used to perform the above desired operation 
+#            of swap
+
+def swap_2(x, y):
+    # print(f'x = {x} and y = {y}')
+    x, y = y, x
+    # print(f'after swapping, x = {x} and y = {y}')
+    return x, y
+
+a, b = 10, 15
+print(f'a = {a} and b = {b}')
+a, b = swap_2(a, b)
+print(f'after passing to swap_2 function, a = {a} and b = {b}')
+
+# in the above example, the values of a and b are swapped successfully using the 
+# return statement to return the changes in x and y arguments, and then the return 
+# value of swap_2 function is assigned to the objects a and b, thus changing the 
+# original values of a and b as well there memory address are changed to the 
+# address of the variables x and y which are returned and assigned to original 
+# objects a and b
