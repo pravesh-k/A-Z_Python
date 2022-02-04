@@ -11,7 +11,6 @@
 '''
 syntax:
 def function_name(parameters):
-    """docstring"""
     statement(s)
     return expression
 '''
@@ -30,6 +29,9 @@ def function_name(parameters):
 
 # a. Creating a function
 # Example 1: simple python function
+from unittest import result
+
+
 def func():
     print('Hello World!')
 
@@ -169,10 +171,60 @@ employee(101, '45D', 'Sales', first_name='Iaan', last_name='Jobs', salary=150000
 
 
 # 4. Docstring
+'''
+**note 3: The first string after the function is called the Document string or Docstring in short. This is used to describe the functionality of the function. The use of docstring in functions is optional but it is considered a good practice.
+
+syntax:
+def function_name(parameters):
+    statement(s)
+    return expression
+
+And to print the docstring of a function call,
+function_name.__doc__
+'''
+
+# Example 1:
+def sum_of_nums(*args):
+    """This function calculates the sum of variable number of inputs"""
+    sum = 0
+    for arg in args:
+        sum += arg
+    print(f'sum = {sum}\n')
+
+print(sum_of_nums.__doc__, '\n')
+sum_of_nums(1, 3, 2)
+sum_of_nums(1, 3, 2, 4, 5)
 
 
 # 5. return statement
+'''
+**note 3: The function's return statement is used to exit from a function and go 
+back to the function caller and return the specified value or data item to the 
+caller.
+
+The return statement can consist of a variable, an expression, or a constant which 
+is returned to the end of the function execution. If none of the above is present 
+with the return statement a None object is returned.'''
+
+# Example 1:
+def prod_of_nums(*args):
+    '''This function returns the product of input numerical values'''
+    pro = 1
+    for arg in args: pro *= arg
+    return pro
+
+print(prod_of_nums.__doc__,'\n')
+result = prod_of_nums(2, 3, 4)
+print(f'prod_result = {result}')
+print(f'prod_result = {prod_of_nums(14, 9)}')
+
+# Example 2:
+def is_even(val):
+    '''This function returns whether the input is even or not'''
+    return True if val%2==0 else False
+
+print(f'is 11 even: {is_even(11)}')
+print(f'is 312100 even: {is_even(312100)}')
 
 
 # 6. Pass by Reference
-
