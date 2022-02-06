@@ -72,3 +72,23 @@ square_even_c_list = list(map(lambda i: i*i, filter(lambda i: i%2==0, c_list)))
 print(f'square_even_c_list: {square_even_c_list}\n')
 
 
+# 3. Writing Recursive functions
+
+# Example 1: A recursive function to find the factorial of number
+def fact_recur(num):
+    return 1 if num == 1 else num * fact_recur(num - 1)
+
+print(f'factorial of 5 is: {fact_recur(5)}'
+    f'\nfactorial of 10 is: {fact_recur(10)}'
+    '\n')
+
+# Example 2: A recursive function to find n fibonacci numbers in sequence
+def fibo_recur(n):
+    if n <= 1:
+        return n
+    else:
+        return fibo_recur(n-1) + fibo_recur(n-2)
+
+print(f'fibonacci sequence with n=5 : {[fibo_recur(i) for i in range(5)]}'
+    f'\nfibonacci sequence with n=10 : {[fibo_recur(i) for i in range(10)]}'
+    '\n')
