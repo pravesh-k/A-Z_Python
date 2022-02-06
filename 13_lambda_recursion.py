@@ -46,3 +46,29 @@ print(f'square of 12: {num_square(12)}'
     '\n')
 
 
+# 2. Lambda functions with other functions
+
+# a. Using lambda func with in-built filter() function
+# Example 1: filter the odd numbers from the list
+a_list = [5, 9, 14 ,6, 36, 7, 8, 10, 11, 17, 109]
+odd_list = list(filter(lambda i: i%2!=0, a_list))
+print(f'odd_list: {odd_list}\n')
+
+# Example 2: filter the number from a list if exists in another list
+b_list = [5, 9, 14 ,6, 36, 7, 8, 10, 11, 17, 108]
+special_list = list(range(3, 110, 3))
+special_b_list = list(filter(lambda x: x in special_list, b_list))
+print(f'special_b_list: {special_b_list}\n')
+
+# b. Using lambda func with in-built map() function
+# Example 1: creating a list of cubes from another list
+c_list = list(range(0,10))
+cubed_c_list = list(map(lambda i: i*i*i, c_list))
+print(f'cubed_c_list: {cubed_c_list}\n')
+
+# c. Using filter() and map() function together with lambda
+# Example 1: creating list of squares from another list but only if the num is even
+square_even_c_list = list(map(lambda i: i*i, filter(lambda i: i%2==0, c_list)))
+print(f'square_even_c_list: {square_even_c_list}\n')
+
+
