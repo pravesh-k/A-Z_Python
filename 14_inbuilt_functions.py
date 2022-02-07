@@ -85,3 +85,43 @@ other_text = 'Pythön is interesting'
 print(f'{normal_text} when passed to ascii() returns: {ascii(normal_text)}'
     f'\n{other_text} when passed to ascii() returns: {ascii(other_text)}'
     '\n')
+
+
+# 5. bin()
+'''
+This function converts and returns the binary equivalent string of a given 
+integer (even represented in octal or hex number).
+syntax:
+bin(num)
+'''
+# Example 1:
+d_num = 5
+o_num = 0o12
+h_num = 0x16
+print(f'The binary equivalent of {d_num} is: {bin(d_num)}'
+    f'\nThe binary equivalent of {o_num} is: {bin(o_num)}'
+    f'\nThe binary equivalent of {h_num} is: {bin(h_num)}'
+    '\n')
+
+
+# 6. bool()
+'''
+This function converts a value to Boolean (True or False) using the standard truth testing procedure.
+syntax:
+bool(value)
+'''
+# Example 1:
+val1 = None
+val2 = True
+val3 = 'string'
+val4 = []
+val5 = [0]
+val6 = [1, 3, 4]
+
+print(f'The bool equivalent of {val1} is: {bool(val1)}'
+    f'\nThe bool equivalent of {val2} is: {bool(val2)}'
+    f'\nThe bool equivalent of {val3} is: {bool(val3)}'
+    f'\nThe bool equivalent of {val4} is: {bool(val4)}'
+    f'\nThe bool equivalent of {val5} is: {bool(val5)}'
+    f'\nThe bool equivalent of {val6} is: {bool(val6)}'
+    '\n')
