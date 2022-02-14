@@ -12,7 +12,7 @@ abs(num)
 where num can be integer, float and complex number
 '''
 # Example 1:
-from cv2 import norm
+from numpy import source
 
 
 num1 = -20
@@ -124,4 +124,20 @@ print(f'The bool equivalent of {val1} is: {bool(val1)}'
     f'\nThe bool equivalent of {val4} is: {bool(val4)}'
     f'\nThe bool equivalent of {val5} is: {bool(val5)}'
     f'\nThe bool equivalent of {val6} is: {bool(val6)}'
+    '\n')
+
+
+# 7. bytearray()
+'''
+This function method returns a bytearray object which is an array of the given bytes.
+syntax:
+bytearray(source, encoding, error)
+'''
+# Example 1:
+prime_list = [2, 3, 5, 7]
+welcome_msg = 'Lorem Ipsum!'
+prime_byte_array = bytearray(prime_list)
+welcome_byte_array = bytearray(welcome_msg, encoding='utf-8')
+print(f'byte array of list: {prime_list} is: {prime_byte_array}'
+    f'\nbyte array of string: {welcome_msg} is: {welcome_byte_array}'
     '\n')
