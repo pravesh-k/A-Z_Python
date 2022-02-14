@@ -12,6 +12,7 @@ abs(num)
 where num can be integer, float and complex number
 '''
 # Example 1:
+from statistics import mode
 from numpy import byte, source
 
 
@@ -178,4 +179,26 @@ chr(i), where i is an integer
 print(f'chr(65) is {chr(65)}'
     f'\nchr(98) is {chr(98)}'
     f'\nchr(2000) is {chr(2000)}'
+    # f'\nchr(-1) is {chr(-1)}'     # ValueError, positive integers are required
     '\n')
+
+
+# 10. compile()
+'''
+This function returns a Python code object from the source (normal string, a byte 
+string, or an AST object).
+compile() method is used if the Python code is in string form or is an AST object, 
+and it needs to be changed to a code object.
+The code object returned by compile() method can later be called using methods 
+like: exec() and eval() which will execute dynamically generated Python code.
+
+syntax:
+compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
+'''
+code_string = 'a = 5\nb=6\nsum=a+b\nprint("sum =",sum)'
+code_from_string = compile(source=code_string, filename='summation', mode='exec')
+print(f'code object from the string is: {code_from_string} and it evaluates to')
+exec(code_from_string)
+
+
+# 11. 
