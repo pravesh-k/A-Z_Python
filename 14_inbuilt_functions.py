@@ -12,7 +12,7 @@ abs(num)
 where num can be integer, float and complex number
 '''
 # Example 1:
-from numpy import source
+from numpy import byte, source
 
 
 num1 = -20
@@ -106,7 +106,8 @@ print(f'The binary equivalent of {d_num} is: {bin(d_num)}'
 
 # 6. bool()
 '''
-This function converts a value to Boolean (True or False) using the standard truth testing procedure.
+This function converts a value to Boolean (True or False) using the standard 
+truth testing procedure.
 syntax:
 bool(value)
 '''
@@ -136,8 +137,45 @@ bytearray(source, encoding, error)
 # Example 1:
 prime_list = [2, 3, 5, 7]
 welcome_msg = 'Lorem Ipsum!'
+num3 = 5
 prime_byte_array = bytearray(prime_list)
 welcome_byte_array = bytearray(welcome_msg, encoding='utf-8')
+byte_array_num3 = bytearray(num3)
+
 print(f'byte array of list: {prime_list} is: {prime_byte_array}'
     f'\nbyte array of string: {welcome_msg} is: {welcome_byte_array}'
+    f'\nbyte array of number: {num3} is: {byte_array_num3}'
+    '\n')
+
+
+# 8. bytes()
+'''
+This function method returns an immutable bytes object initialized with the 
+given size and data.
+syntax:
+bytes(source, encoding, error)
+'''
+odd_list = [1, 3, 5, 7, 9]
+msg_1 = 'Python is awesome!'
+num4 = 4
+odd_bytes = bytes(odd_list)
+msg_1_bytes = bytes(msg_1, encoding='utf-8')
+num4_bytes = bytes(num4)
+
+print(f'bytes of list: {odd_list} is: {odd_bytes}'
+    f'\nbytes of string: {msg_1} is: {msg_1_bytes}'
+    f'\nbytes of number: {num4} is: {num4_bytes}'
+    '\n')
+
+
+# 9. chr()
+'''
+This function returns a character (a string) from an integer (represents unicode 
+code point of the character).
+syntax:
+chr(i), where i is an integer
+'''
+print(f'chr(65) is {chr(65)}'
+    f'\nchr(98) is {chr(98)}'
+    f'\nchr(2000) is {chr(2000)}'
     '\n')
