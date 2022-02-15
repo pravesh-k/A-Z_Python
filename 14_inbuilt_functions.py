@@ -201,4 +201,33 @@ print(f'code object from the string is: {code_from_string} and it evaluates to')
 exec(code_from_string)
 
 
-# 11. 
+# 11. classmethod()
+'''
+This function returns a class method for the given function. A class method is a 
+method that is bound to a class rather than its object.
+This function usage is deprecated and is non-pythonic instead @classmethod 
+decorator should be used. Refer to the decorators file.
+'''
+
+# 12. complex()
+'''
+This function returns a complex number when real and imaginary parts are provided, 
+or it converts a string to a complex number.
+syntax:
+complex(real, imag) 
+OR
+complex('real+imag')
+'''
+cmplx_1 = complex(4, 5)
+cmplx_2 = complex('2-3j')
+cmplx_3 = complex(7)
+cmplx_4 = complex()
+cmplx_5 = complex('0-1.5J')
+
+print(f'cmplx_1: {cmplx_1}'
+    f'\ncmplx_2: {cmplx_2}'
+    f'\ncmplx_3: {cmplx_3}'
+    f'\ncmplx_4: {cmplx_4}'
+    f'\ncmplx_5: {cmplx_5}'
+    '\n')
+
