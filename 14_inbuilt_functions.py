@@ -268,3 +268,45 @@ print(f'divmod(8, 3) = {divmod(8, 3)}'
     f'\ndivmod(7.5, 2.5) = {divmod(7.5, 2.5)}'
     f'\ndivmod(2.6, 0.5) = {divmod(2.6, 0.5)}'
     '\n')
+
+
+# 16. enumerate()
+'''
+This function adds a counter to an iterable and returns it (the enumerate object).
+syntax:
+enumerate(iterable, start)
+where, start parameter is optional and default value is 0
+'''
+grocery = ['bread', 'milk', 'butter']
+enumerate_grocery_1 = enumerate(grocery)
+enumerate_grocery_2 = enumerate(grocery, 5)
+
+print(f'type of enumerate_grocery: {type(enumerate_grocery_1)}'
+    f'\nenumerate_grocery_1: {enumerate_grocery_1}'
+    f'\ncasting to list: {list(enumerate_grocery_1)}'
+    f'\nchanging default counter: {list(enumerate_grocery_2)}'
+    '\n')
+
+# looping over an enumerate object
+for count, item in enumerate(grocery):
+    print(count, item)
+print()
+
+
+# 17. staticmethod()
+'''
+This built-in function returns a static method for a given function.
+
+Static methods, much like class methods, are methods that are bound to a class 
+rather than its object.
+They do not require a class instance creation. So, they are not dependent on the 
+state of the object.
+The difference between a static method and a class method is Static method knows 
+nothing about the class and just deals with the parameters. Whereas, Class method 
+works with the class since its parameter is always the class itself.
+
+staticmethod() is considered a un-Pythonic way of creating a static function. Hence, in newer versions of Python, @staticmethod decorator should be used.
+'''
+
+
+# 18. 
