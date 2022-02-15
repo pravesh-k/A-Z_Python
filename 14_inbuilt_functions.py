@@ -231,3 +231,40 @@ print(f'cmplx_1: {cmplx_1}'
     f'\ncmplx_5: {cmplx_5}'
     '\n')
 
+
+# 13. dict()
+'''
+The dict() constructor creates a dictionary in Python. Refer to dictionaries file.
+'''
+
+
+# 14. dir()
+'''
+This function tries to return a list of valid attributes of any object.
+syntax:
+dir(object)
+'''
+even_list = [2, 4, 6, 8]
+emp_dict = dict(name='Jacob', des='Manager', salary=50000)
+num_5 = 5000
+print(f'attributes of {even_list} are\n\n{dir(even_list)}\n'
+    f'\nattributes of {emp_dict} are\n\n{dir(emp_dict)}\n'
+    f'\nattributes of {num_5} are\n\n{dir(num_5)}\n'
+    '\n')
+
+
+# 15. divmod()
+'''
+This function takes two numbers and returns a pair of numbers (a tuple) consisting 
+of their quotient and remainder.
+syntax:
+divmod(numerator, denominator)
+'''
+print(f'divmod(8, 3) = {divmod(8, 3)}'
+    f'\ndivmod(3, 8) = {divmod(3, 8)}'
+    f'\ndivmod(5, 5) = {divmod(5, 5)}'
+    f'\ndivmod(8.0, 3) = {divmod(8.0, 3)}'
+    f'\ndivmod(3, 8.0) = {divmod(3, 8.0)}'
+    f'\ndivmod(7.5, 2.5) = {divmod(7.5, 2.5)}'
+    f'\ndivmod(2.6, 0.5) = {divmod(2.6, 0.5)}'
+    '\n')
