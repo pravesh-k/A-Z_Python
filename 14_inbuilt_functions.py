@@ -305,8 +305,16 @@ The difference between a static method and a class method is Static method knows
 nothing about the class and just deals with the parameters. Whereas, Class method 
 works with the class since its parameter is always the class itself.
 
-staticmethod() is considered a un-Pythonic way of creating a static function. Hence, in newer versions of Python, @staticmethod decorator should be used.
+staticmethod() is considered a un-Pythonic way of creating a static function. 
+Hence, in newer versions of Python, @staticmethod decorator should be used.
 '''
 
 
-# 18. 
+# 18. filter()
+'''
+The filter() function extracts elements from an iterable (list, tuple etc.) for 
+which a function returns True.
+syntax:
+filter(function, iterable)
+Refer to lambda_recursion file for example.
+'''
