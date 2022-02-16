@@ -156,6 +156,7 @@ given size and data.
 syntax:
 bytes(source, encoding, error)
 '''
+# Example 1:
 odd_list = [1, 3, 5, 7, 9]
 msg_1 = 'Python is awesome!'
 num4 = 4
@@ -176,6 +177,7 @@ code point of the character).
 syntax:
 chr(i), where i is an integer
 '''
+# Example 1:
 print(f'chr(65) is {chr(65)}'
     f'\nchr(98) is {chr(98)}'
     f'\nchr(2000) is {chr(2000)}'
@@ -195,6 +197,7 @@ like: exec() and eval() which will execute dynamically generated Python code.
 syntax:
 compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
 '''
+# Example 1:
 code_string = 'a = 5\nb=6\nsum=a+b\nprint("sum =",sum)'
 code_from_string = compile(source=code_string, filename='summation', mode='exec')
 print(f'code object from the string is: {code_from_string} and it evaluates to')
@@ -218,6 +221,7 @@ complex(real, imag)
 OR
 complex('real+imag')
 '''
+# Example 1:
 cmplx_1 = complex(4, 5)
 cmplx_2 = complex('2-3j')
 cmplx_3 = complex(7)
@@ -244,6 +248,7 @@ This function tries to return a list of valid attributes of any object.
 syntax:
 dir(object)
 '''
+# Example 1:
 even_list = [2, 4, 6, 8]
 emp_dict = dict(name='Jacob', des='Manager', salary=50000)
 num_5 = 5000
@@ -260,6 +265,7 @@ of their quotient and remainder.
 syntax:
 divmod(numerator, denominator)
 '''
+# Example 1:
 print(f'divmod(8, 3) = {divmod(8, 3)}'
     f'\ndivmod(3, 8) = {divmod(3, 8)}'
     f'\ndivmod(5, 5) = {divmod(5, 5)}'
@@ -277,6 +283,7 @@ syntax:
 enumerate(iterable, start)
 where, start parameter is optional and default value is 0
 '''
+# Example 1:
 grocery = ['bread', 'milk', 'butter']
 enumerate_grocery_1 = enumerate(grocery)
 enumerate_grocery_2 = enumerate(grocery, 5)
@@ -287,7 +294,7 @@ print(f'type of enumerate_grocery: {type(enumerate_grocery_1)}'
     f'\nchanging default counter: {list(enumerate_grocery_2)}'
     '\n')
 
-# looping over an enumerate object
+# Example 2: looping over an enumerate object
 for count, item in enumerate(grocery):
     print(count, item)
 print()
@@ -329,6 +336,7 @@ eval(expression, globals, locals)
 where, globals and locals parameter are optional where these variables are used for 
 global and local variables respectively.
 '''
+# Example 1:
 num_6 = 8
 square_num = eval('num_6**2')
 print(f'square_num: {square_num}\n')
@@ -349,4 +357,23 @@ This function returns a formatted representation of the given value controlled b
 syntax:
 format(value format_spec)
 Refer to strings.py file for examples (section 6)
+'''
+
+
+# 22. frozenset()
+'''
+This function returns an immutable frozenset object initialized with elements from the given iterable.
+syntax:
+frozenset([iterable])
+where iterable is optional
+Refer to sets.py file (section 6) for examples
+'''
+
+
+# 23. exec()
+'''
+This function executes the dynamically created program, which is either a string or a code object.
+syntax:
+exec(object, globals, locals)
+Refer to section 10 for examples on exec
 '''
