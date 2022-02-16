@@ -318,3 +318,35 @@ syntax:
 filter(function, iterable)
 Refer to lambda_recursion file for example.
 '''
+
+
+# 19. eval()
+'''
+This function parses the expression passed to this method and runs python expression 
+(code) within the program.
+syntax:
+eval(expression, globals, locals)
+where, globals and locals parameter are optional where these variables are used for 
+global and local variables respectively.
+'''
+num_6 = 8
+square_num = eval('num_6**2')
+print(f'square_num: {square_num}\n')
+
+
+# 20. float()
+'''
+This function returns a floating point number from a number or a string.
+syntax:
+float(int or string)
+Refer to numerics.py file for example (section 3)
+'''
+
+
+# 21. format()
+'''
+This function returns a formatted representation of the given value controlled by the format specifier.
+syntax:
+format(value format_spec)
+Refer to strings.py file for examples (section 6)
+'''
