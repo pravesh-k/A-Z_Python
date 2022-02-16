@@ -353,7 +353,8 @@ Refer to numerics.py file for example (section 3)
 
 # 21. format()
 '''
-This function returns a formatted representation of the given value controlled by the format specifier.
+This function returns a formatted representation of the given value controlled by the 
+format specifier.
 syntax:
 format(value format_spec)
 Refer to strings.py file for examples (section 6)
@@ -362,7 +363,8 @@ Refer to strings.py file for examples (section 6)
 
 # 22. frozenset()
 '''
-This function returns an immutable frozenset object initialized with elements from the given iterable.
+This function returns an immutable frozenset object initialized with elements from the 
+given iterable.
 syntax:
 frozenset([iterable])
 where iterable is optional
@@ -372,7 +374,8 @@ Refer to sets.py file (section 6) for examples
 
 # 23. exec()
 '''
-This function executes the dynamically created program, which is either a string or a code object.
+This function executes the dynamically created program, which is either a string or a 
+code object.
 syntax:
 exec(object, globals, locals)
 Refer to section 10 for examples on exec
@@ -381,7 +384,8 @@ Refer to section 10 for examples on exec
 
 # 24. hasattr()
 '''
-This function returns true if an object has the given named attribute and false if it does not.
+This function returns true if an object has the given named attribute and false if it 
+does not.
 syntax:
 hasattr(object, name)
 '''
@@ -399,3 +403,46 @@ where object is optional
 '''
 # Example 1:
 # help(list)
+
+
+# 26. hex()
+'''
+This function converts an integer number to the corresponding hexadecimal string.
+syntax:
+hex(value)
+where value can be integer
+
+Other implemetation: for converting float types
+float.hex(value)
+'''
+# Example 1:
+b_num = 0b0111
+o_num = 0o12
+d_num = 16
+print(f'The hex equivalent of {b_num} is: {hex(b_num)}'
+    f'\nThe hex equivalent of {o_num} is: {hex(o_num)}'
+    f'\nThe hex equivalent of {d_num} is: {hex(d_num)}'
+    '\n')
+
+# Example 2:
+f_num = 16.15
+print(f'The hex equivalent of {f_num} is: {float.hex(f_num)}'
+    '\n')
+
+
+# 27. hash()
+'''
+This function returns the hash value of an object if it has one. Hash values are just 
+integers that are used to compare dictionary keys during a dictionary look quickly.
+
+A hash value is a numeric value of a fixed length that uniquely identifies data.
+syntax:
+hash(object)
+'''
+message_1 = 'Welcome here!'
+num_7 = 3121
+f_num_2 = 12.12
+print(f'hash value of message_1: {hash(message_1)}'
+    f'\nhash value of num_7: {hash(num_7)}'
+    f'\nhash value of f_num_2: {hash(f_num_2)}'
+    '\n')
