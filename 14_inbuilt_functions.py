@@ -446,3 +446,48 @@ print(f'hash value of message_1: {hash(message_1)}'
     f'\nhash value of num_7: {hash(num_7)}'
     f'\nhash value of f_num_2: {hash(f_num_2)}'
     '\n')
+
+
+# 28. input()
+'''
+This function takes input from the user and returns it. This always returns a string.
+This essentially is the most important and most used input method in python3.
+syntax:
+input(prompt_message)
+where prompt message is optional
+'''
+# Example 1:
+# input_1 = input()
+# input_2 = input('enter a value ')
+# print(f'value of input_1: {input_1}'
+#     f'\nvalue of input_2: {input_2}'
+#     '\n')
+
+
+# 29. id()
+'''
+This function returns identity/memory address (unique integer) of an object.
+syntax:
+id(object)
+Refer to lists.py (**note 1) for examples
+'''
+
+
+# 30. isinstance()
+'''
+This function checks if the object (first argument) is an instance or subclass of 
+classinfo class (second argument).
+syntax:
+isinstance(object, classinfo)
+'''
+# Example 1:
+numbers = [15, 5, 8, 3, 10]
+print(f'is numbers an instance of list?: {isinstance(numbers, list)}'
+    f'\nis numbers an instance of dict?: {isinstance(numbers, dict)}'
+    '\n')
+
+# Example 2: passing a tuple of classinfo
+fruits = 'kiwi', 'mango'
+print(f'is fruits an instance of either list or tuple or dict?: '
+    f'{isinstance(fruits, (list, tuple, dict))}'
+    '\n')
