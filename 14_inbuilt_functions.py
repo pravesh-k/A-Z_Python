@@ -377,3 +377,25 @@ syntax:
 exec(object, globals, locals)
 Refer to section 10 for examples on exec
 '''
+
+
+# 24. hasattr()
+'''
+This function returns true if an object has the given named attribute and false if it does not.
+syntax:
+hasattr(object, name)
+'''
+# Example 1:
+car_list = ['BMW', 'Benz', 'Honda', 'Porsche']
+print(f'is count an attribute of car_list? :{hasattr(car_list, "count")}\n')
+
+
+# 25. help()
+'''
+This function calls the inbuilt python help system
+syntax:
+help(object)
+where object is optional
+'''
+# Example 1:
+# help(list)
