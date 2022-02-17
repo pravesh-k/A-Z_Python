@@ -491,3 +491,44 @@ fruits = 'kiwi', 'mango'
 print(f'is fruits an instance of either list or tuple or dict?: '
     f'{isinstance(fruits, (list, tuple, dict))}'
     '\n')
+
+
+# 31. int()
+'''
+This function returns an integer object from any number or string
+syntax:
+int(x, base)
+where x is the number or string and base of x
+'''
+# Example 1:
+print(f'int(50): {int(50)}'
+    f'\nint("100"): {int("100")}'
+    f'\nint("0b1100", 2): {int("0b1100", 2)}'
+    f'\nint("0o105", 8): {int("0o105", 8)}'
+    f'\nint(123.123): {int(123.123)}'
+    f'\nint("50", 10): {int("50", 10)}'
+    '\n')
+
+
+# 32. issubclass()
+'''
+This function checks if the class argument (first argument) is a 
+subclass of classinfo class (second argument).
+syntax:
+issubclass(class, classinfo)
+where class is that which needs to be checked whether it is a subclass 
+of classinfo
+'''
+# Example 1:
+class A:
+    pass
+class B(A):
+    pass
+
+print(f'is B a subclass of A? : {issubclass(B, A)}'
+    f'\nis A a subclass of A? : {issubclass(A, A)}'
+    f'\nis A a subclass of B? : {issubclass(A, B)}'
+    '\n')
+
+
+# 33. 
