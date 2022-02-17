@@ -555,3 +555,33 @@ print(f'vowels_iter.__next__(): {vowels_iter.__next__()}'
     f'\nvowels_iter.__next__(): {vowels_iter.__next__()}'
     f'\nvowels_iter.__next__(): {vowels_iter.__next__()}'
     '\n')
+
+
+# 34. list()
+'''
+The list() constructor returns a list in python.
+syntax:
+list(iterable)
+where iterable is optional
+Refer to lists.py file for examples
+'''
+
+
+# 35. len()
+'''
+This function returns the number of items (length) in an object.
+syntax:
+len(sequence)
+'''
+# Example 1:
+list_1 = []
+list_2 = [1, 1, 8, 8]
+tuple_1 = 2, 5, 7, 11, 17
+dict_1 = {'a':1, 'b':2}
+string_1 = 'Okaayyy'
+print(f'length of list_1: {list_1} is= {len(list_1)}'
+    f'\nlength of list_2: {list_2} is= {len(list_2)}'
+    f'\nlength of tuple_1: {tuple_1} is= {len(tuple_1)}'
+    f'\nlength of dict_1: {dict_1} is= {len(dict_1)}'
+    f'\nlength of string_1: {string_1} is= {len(string_1)}'
+    '\n')
