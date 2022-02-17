@@ -585,3 +585,45 @@ print(f'length of list_1: {list_1} is= {len(list_1)}'
     f'\nlength of dict_1: {dict_1} is= {len(dict_1)}'
     f'\nlength of string_1: {string_1} is= {len(string_1)}'
     '\n')
+
+
+# 36. max()
+'''
+This function returns the largest item in an iterable. It can also be 
+used to find the largest item between two or more parameters.
+syntax:
+max(iterable, *iterables, key, default)
+where there can be a single or multiple iterable,
+key is optional and accepts a function where the iterables are 
+passed and comparison is performed based on its return value. And 
+default is also optional which is to be returned when iterable is empty
+'''
+# Example 1:
+marks = 15, 20, 7, 98, 45
+cities = 'kolkata', 'mumbai', 'delhi', 'bangalore'
+subject_credit = {'physics':3, 'maths':4, 'chemistry':3, 'english':1}
+print(f'max in marks: {max(marks)}'
+    f'\nmax in cities: {max(cities)}'
+    f'\nmax in cities: {max(cities, key=len)}'
+    f'\nsubject with max in subject_credit: {max(subject_credit, key=lambda i: subject_credit[i])}'
+    '\n')
+
+
+# 37. min()
+'''
+This function returns the smallest item in an iterable. It can also be 
+used to find the smallest item between two or more parameters.
+syntax:
+min(iterable, *iterables, key, default)
+where there can be a single or multiple iterable,
+key is optional and accepts a function where the iterables are 
+passed and comparison is performed based on its return value. And 
+default is also optional which is to be returned when iterable is empty
+'''
+# Example 1:
+print(f'min in marks: {min(marks)}'
+    f'\nmin in cities: {min(cities)}'
+    f'\nmin in cities: {min(cities, key=len)}'
+    f'\nsubject with min in subject_credit: {min(subject_credit, key=lambda i: subject_credit[i])}'
+    f'\nmin in empty list: {min(list(), default=None)}'
+    '\n')
