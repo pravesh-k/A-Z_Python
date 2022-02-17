@@ -13,6 +13,7 @@ where num can be integer, float and complex number
 '''
 # Example 1:
 from statistics import mode
+from unittest.mock import sentinel
 from numpy import byte, source
 
 
@@ -531,4 +532,26 @@ print(f'is B a subclass of A? : {issubclass(B, A)}'
     '\n')
 
 
-# 33. 
+# 33. iter()
+'''
+This function returns an iterator for the given object.
+
+**note 1: an iterator is an object which implements the iterator protocol, 
+which means it consists of the methods such as __iter__() and __next__(). 
+An iterator is an iterable object with a state so it remembers where it is
+during iteration
+
+syntax:
+iter(object, sentinel)
+where object indicates the object whose iterable needs to be created
+and sentinel is optional which is used to indicate the end of the sequence
+The values out of an iterable can be accessed via attribute __next__()
+'''
+# Example 1:
+vowels = ['a', 'b', 'c', 'd', 'e']
+vowels_iter = iter(vowels)
+# print(f'attributes of vowels_iter: {dir(vowels_iter)}\n')
+print(f'vowels_iter.__next__(): {vowels_iter.__next__()}'
+    f'\nvowels_iter.__next__(): {vowels_iter.__next__()}'
+    f'\nvowels_iter.__next__(): {vowels_iter.__next__()}'
+    '\n')
