@@ -650,3 +650,48 @@ test_object = object()
 print(f'test_object: {test_object}'
     f'\n\nattributes of test_object:\n {dir(test_object)}'
     '\n')
+
+
+# 40. oct()
+'''
+This function takes an integer number (decimal, binary, hexadecimal) and returns 
+its octal representation.
+syntax:
+oct(num)
+'''
+print(f'oct(10) is: {oct(10)}'
+    f'\noct(0b101) is: {oct(0b101)}'
+    f'\noct(0XA) is: {oct(0XA)}'
+    '\n')
+
+
+# 41. ord()
+'''
+This function returns an integer representing the Unicode character. This function 
+is reverse of chr() function.
+syntax:
+order(ch)
+where ch is a unicode character
+'''
+print(f'ord("5"): {ord("5")}'
+    f'\nord("A"): {ord("A")}'
+    f'\nord("$"): {ord("$")}'
+    '\n')
+
+
+# 42. open()
+'''
+This function opens the file (if possible) and returns the corresponding file 
+object.
+syntax:
+open(file, mode, buffering, encoding, errors, newline, closefd, opener)
+where, 
+file: filename with path, 
+mode: the mode in which file needs to be opened ('r' for read, 'w' for write, etc)
+buferring: used for setting buferring policy
+encoding: the encoding format
+errors: string specifying handling of encoding/decoding erros 
+newline: working of newline modes
+*All other parameters are optional except file
+Refer to file_handling file for examples
+'''
