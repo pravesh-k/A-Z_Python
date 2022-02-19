@@ -627,3 +627,26 @@ print(f'min in marks: {min(marks)}'
     f'\nsubject with min in subject_credit: {min(subject_credit, key=lambda i: subject_credit[i])}'
     f'\nmin in empty list: {min(list(), default=None)}'
     '\n')
+
+
+# 38. map()
+'''
+This function applies a given function to each item of an iterable (list, tuple 
+etc.) and returns an iterator.
+syntax:
+map(function, iterable)
+*more than one iterable can be passed at once to the function.
+Refer to lambda_recursion file (section 2) for examples
+'''
+
+
+# 39. object()
+'''
+This function returns a featureless object which is a base for all classes.
+syntax:
+object()
+'''
+test_object = object()
+print(f'test_object: {test_object}'
+    f'\n\nattributes of test_object:\n {dir(test_object)}'
+    '\n')
