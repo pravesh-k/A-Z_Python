@@ -695,3 +695,31 @@ newline: working of newline modes
 *All other parameters are optional except file
 Refer to file_handling file for examples
 '''
+
+
+# 43. pow()
+'''
+This function returns the value of number raised to some power.
+syntax:
+pow(base, exponent, modulus)
+where, base is the number whose power raised value is to be found,
+exponent is the value to which the power needs to be raised,
+modulus is an optional parameter and is used for modulus of final value
+'''
+print(f'5 raised to 3 is: {pow(5,3)}'
+    f'\n2 raised to 10 is: {pow(2,10)}'
+    f'\n-2 raised to 5 is: {pow(-2,2)}'
+    f'\n2 raised to -2 is: {pow(2,-2)}'
+    f'\n-2 raised to -2 is: {pow(-2,-2)}'
+    f'\n3 raised to 5 and mod 7 is: {pow(3,5,7)}'
+    '\n')
+
+
+# 44. range()
+'''
+This function returns an immutable sequence of numbers between the given start 
+and stop integer values.
+syntax:
+range(stop) OR range(start, stop) OR range(start, stop, step)
+Refer to for_loop file (section 2) for examples
+'''
