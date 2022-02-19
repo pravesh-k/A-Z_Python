@@ -723,3 +723,36 @@ syntax:
 range(stop) OR range(start, stop) OR range(start, stop, step)
 Refer to for_loop file (section 2) for examples
 '''
+
+
+# 45. reversed()
+'''
+This function returns the reversed iterator of the given sequence.
+syntax:
+reversed(sequence)
+'''
+seq_string = 'Python'
+seq_tuple = ('P', 'y', 't', 'h', 'o', 'n')
+seq_range = range(5, 9)
+seq_list = [1, 2, 4, 3, 5]
+print(f'reverse of seq_string: {list(reversed(seq_string))}'
+    f'\nreverse of seq_tuple: {tuple(reversed(seq_tuple))}'
+    f'\nreverse of seq_range: {tuple(reversed(seq_range))}'
+    f'\nreverse of seq_list: {list(reversed(seq_list))}'
+    '\n')
+
+
+# 46. round()
+'''
+This function returns a floating-point number rounded to specified number 
+of decimals.
+syntax:
+round(number, ndigits)
+where, ndigits is optional
+'''
+print(f'10 rounded is: {round(10)}'
+    f'\n10.6 rounded is: {round(10.6)}'
+    f'\n5.5 rounded is: {round(5.5)}'
+    f'\n15.174 rounded to 2 digits is: {round(15.174, 2)}'
+    f'\n15.174 rounded to 1 digit is: {round(15.174, 1)}'
+    '\n')
