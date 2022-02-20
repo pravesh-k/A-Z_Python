@@ -756,3 +756,34 @@ print(f'10 rounded is: {round(10)}'
     f'\n15.174 rounded to 2 digits is: {round(15.174, 2)}'
     f'\n15.174 rounded to 1 digit is: {round(15.174, 1)}'
     '\n')
+
+
+# 47. set()
+'''
+This function creates a set type data container in python.
+syntax:
+set(iterable)
+Refer to sets file for details and example
+'''
+
+
+# 48. setattr()
+'''
+This function sets the valueof the attribute of an object.
+syntax:
+setattr(object, attribute_name, value)
+'''
+class Student:
+    marks = 88
+    name = 'Shawn'
+
+student_1 = Student()
+print(f'Student\'s name: {student_1.name}'
+    f'\t\tmarks: {student_1.marks}'
+    f'\n\nchanging attribute values'
+    '\n')
+setattr(student_1, 'name', 'Adam')
+setattr(student_1, 'marks', '95')
+print(f'Student\'s name: {student_1.name}'
+    f'\t\tmarks: {student_1.marks}'
+    '\n')
