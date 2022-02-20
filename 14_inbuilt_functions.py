@@ -882,7 +882,7 @@ Refer to tuples file for more details and examples
 '''
 
 
-# type()
+# 54. type()
 '''
 This function either returns the type of the object or returns a new type 
 object based on the arguments passed.
@@ -892,4 +892,61 @@ Refer to numerics file (**note 1) for details and examples.
 '''
 
 
-# 
+# 55. vars()
+'''
+This function returns the __dict__ attribute of the given object. If
+the object doesn't have a __dict__ attribute, it raises TypeError exception.
+syntax:
+vars(object)
+'''
+# Example 1:
+class Foo:
+    def __init__(self, a=5, b=6):
+        self.a = a
+        self.b = b
+
+obj = Foo()
+print(f'__dict__ attribute of obj is: {vars(obj)}\n')
+
+# Example 2:
+print(f'__dict__ of tuple:{vars(tuple)}\n')
+
+
+# 56. zip()
+'''
+This function takes iterable (can be 0 or more), aggregates them in a tuple
+and returns it.
+syntax:
+zip(*iterables)
+'''
+# Example 1:
+languages = ['Java', 'Python', 'JavaScript']
+versions = [14, 3, 6]
+zip_none = zip()
+zip_languages = zip(languages)
+zip_lan_ver = zip(languages, versions)
+print(f'\nlanguages: {languages}'
+    f'\nversions: {versions}'
+    f'\nzip_none in list format: {list(zip_none)}'
+    f'\nzip_languages in list format: {list(zip_languages)}'
+    f'\nzip_lan_ver in list format: {list(zip_lan_ver)}'
+    '\n')
+
+# Example 2: mismatching length of iterables
+student_list = ['Jake', 'Chris', 'Mathew']
+marks_list = [100, 45, 78, 96, 23]
+zip_stu_marks = list(zip(student_list, marks_list))
+print(f'\nstudent_list: {student_list}'
+    f'\nmarks_list: {marks_list}'
+    f'\nzip_stu_marks in list format: {zip_stu_marks}'
+    '\n')
+
+
+# Example 3: Unzipping the list of tuples
+stu, mar = zip(*zip_stu_marks)
+print(f'unzipped zip_stu_marks:'
+    f'\nstu: {stu}'
+    f'\nmar: {mar}'
+    '\n')
+
+
