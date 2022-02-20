@@ -870,3 +870,26 @@ vals_list = [100, 200, 300, 400, 500]
 sum_vals_items = int(sum(vals_list))
 print(f'sum of items of vals_list: {sum_vals_items}'
     '\n')
+
+
+# 53. tuple()
+'''
+This function can be used to create tuples in Python.
+syntax:
+tuple(iterable)
+where iterable is optional, not providing it will create empty tuple object.
+Refer to tuples file for more details and examples
+'''
+
+
+# type()
+'''
+This function either returns the type of the object or returns a new type 
+object based on the arguments passed.
+syntax:
+type(object)
+Refer to numerics file (**note 1) for details and examples.
+'''
+
+
+# 
