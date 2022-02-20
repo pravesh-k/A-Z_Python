@@ -646,6 +646,7 @@ This function returns a featureless object which is a base for all classes.
 syntax:
 object()
 '''
+# Example 1:
 test_object = object()
 print(f'test_object: {test_object}'
     f'\n\nattributes of test_object:\n {dir(test_object)}'
@@ -659,6 +660,7 @@ its octal representation.
 syntax:
 oct(num)
 '''
+# Example 1:
 print(f'oct(10) is: {oct(10)}'
     f'\noct(0b101) is: {oct(0b101)}'
     f'\noct(0XA) is: {oct(0XA)}'
@@ -673,6 +675,7 @@ syntax:
 order(ch)
 where ch is a unicode character
 '''
+# Example 1:
 print(f'ord("5"): {ord("5")}'
     f'\nord("A"): {ord("A")}'
     f'\nord("$"): {ord("$")}'
@@ -706,6 +709,7 @@ where, base is the number whose power raised value is to be found,
 exponent is the value to which the power needs to be raised,
 modulus is an optional parameter and is used for modulus of final value
 '''
+# Example 1:
 print(f'5 raised to 3 is: {pow(5,3)}'
     f'\n2 raised to 10 is: {pow(2,10)}'
     f'\n-2 raised to 5 is: {pow(-2,2)}'
@@ -731,6 +735,7 @@ This function returns the reversed iterator of the given sequence.
 syntax:
 reversed(sequence)
 '''
+# Example 1:
 seq_string = 'Python'
 seq_tuple = ('P', 'y', 't', 'h', 'o', 'n')
 seq_range = range(5, 9)
@@ -750,6 +755,7 @@ syntax:
 round(number, ndigits)
 where, ndigits is optional
 '''
+# Example 1:
 print(f'10 rounded is: {round(10)}'
     f'\n10.6 rounded is: {round(10.6)}'
     f'\n5.5 rounded is: {round(5.5)}'
@@ -775,6 +781,7 @@ an assigns value to it.
 syntax:
 setattr(object, attribute_name, value)
 '''
+# Example 1:
 class Student:
     marks = 88
     name = 'Shawn'
@@ -798,6 +805,7 @@ syntax:
 slice(start, stop, step)
 where, start and step are optional
 '''
+# Example 1:
 text_message = 'The world of python is fun.'
 slicer = slice(15)
 slicer_2 = slice(4,20,2)
@@ -815,6 +823,7 @@ syntax:
 sorted(iterable, key, reverse=False)
 where key and iterable are optional and have None and False as values respectively
 '''
+# Example 1:
 some_numbers = [8, 12, 7, 19, 78, 99, 13, 32, 19, 32]
 some_tuple = 'ace', 'spade', 'club', 'diamond'
 some_text = 'Python_'
@@ -866,6 +875,7 @@ syntax:
 sum(iterable, start)
 where, start is optional, default is 0, start is added to the sum result.
 '''
+# Example 1:
 vals_list = [100, 200, 300, 400, 500]
 sum_vals_items = int(sum(vals_list))
 print(f'sum of items of vals_list: {sum_vals_items}'
