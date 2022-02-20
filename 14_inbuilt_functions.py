@@ -199,7 +199,7 @@ syntax:
 compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
 '''
 # Example 1:
-code_string = 'a = 5\nb=6\nsum=a+b\nprint("sum =",sum)'
+code_string = 'a = 5\nb=6\nsum_a_b=a+b\nprint("sum_a_b =",sum_a_b)'
 code_from_string = compile(source=code_string, filename='summation', mode='exec')
 print(f'code object from the string is: {code_from_string} and it evaluates to')
 exec(code_from_string)
@@ -825,4 +825,48 @@ print(f'some_numbers: {some_numbers}'
     f'\nsorted length wise: {sorted(some_tuple,key=len)}'    
     f'\n\nsome_text: {some_text}'    
     f'\nsorted some_text: {sorted(some_text)}'    
+    '\n')
+
+
+# 51. str()
+'''
+This function returns the string version of the given object
+syntax:
+str(object, encoding, errors)
+where, encoding and errors are optional with 'utf-8' and 'strict' as default 
+values respectively.
+
+**note 2: There are 6 types of erros:
+strict
+ignore
+replace
+xmlcharrefreplace
+backslashreplace
+namereplace
+'''
+# Example 1:
+print(f'str(10): {str(10)}'
+    f'\nstr(10.164): {str(10.164)}'
+    f'\nstr("hello"): {str("hello")}'
+    f'\nstr([1,2,3,4]): {str([1,2,3,4])}'
+    '\n')
+
+# Example 2: stringify with different encoding and error
+byte_string = bytes('pythön', encoding='utf-8')
+print(f'stringify byte_string with ascii encoding and ignoring\n'
+    f'the encoding errors: {str(byte_string, encoding="ascii", errors="ignore")}\n')
+    # the character 'ö' cannot be decoded by ASCII and hence ignored as 
+    # ignore value is used for errors
+
+
+# 52. sum()
+'''
+This function adds the items of an iterable and returns the sum.
+syntax:
+sum(iterable, start)
+where, start is optional, default is 0, start is added to the sum result.
+'''
+vals_list = [100, 200, 300, 400, 500]
+sum_vals_items = int(sum(vals_list))
+print(f'sum of items of vals_list: {sum_vals_items}'
     '\n')
