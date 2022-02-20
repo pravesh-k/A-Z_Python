@@ -950,3 +950,12 @@ print(f'unzipped zip_stu_marks:'
     '\n')
 
 
+# 57. super()
+'''
+In case of Inheritence, the super() builtin returns a proxy object 
+(temporary object of the superclass) that allows us to access methods 
+of the base class.
+syntax:
+super()
+Refer to classes_objects file for more details and examples.
+'''
