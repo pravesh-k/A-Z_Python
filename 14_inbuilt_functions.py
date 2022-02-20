@@ -769,7 +769,9 @@ Refer to sets file for details and example
 
 # 48. setattr()
 '''
-This function sets the valueof the attribute of an object.
+This function sets the valueof the attribute of an object. 
+If the attribute is not found, setattr() creates a new attribute
+an assigns value to it.
 syntax:
 setattr(object, attribute_name, value)
 '''
@@ -786,4 +788,41 @@ setattr(student_1, 'name', 'Adam')
 setattr(student_1, 'marks', '95')
 print(f'Student\'s name: {student_1.name}'
     f'\t\tmarks: {student_1.marks}'
+    '\n')
+
+
+# 49. slice()
+'''
+This function is used to return a slice object that is used to slice any sequence.
+syntax:
+slice(start, stop, step)
+where, start and step are optional
+'''
+text_message = 'The world of python is fun.'
+slicer = slice(15)
+slicer_2 = slice(4,20,2)
+print(f'text_message: {text_message}'
+    f'\nsliced text_message using slicer: {text_message[slicer]}'
+    f'\nsliced text_message using slicer_2: {text_message[slicer_2]}'
+    '\n')
+
+
+# 50. sorted()
+'''
+This function sorts the elements of a given iterable in a specific order
+(ascending or descending) and returns it as a list.
+syntax:
+sorted(iterable, key, reverse=False)
+where key and iterable are optional and have None and False as values respectively
+'''
+some_numbers = [8, 12, 7, 19, 78, 99, 13, 32, 19, 32]
+some_tuple = 'ace', 'spade', 'club', 'diamond'
+some_text = 'Python_'
+print(f'some_numbers: {some_numbers}'
+    f'\nsorted ascending: {sorted(some_numbers)}'    
+    f'\n\nsome_tuple: {some_tuple}'    
+    f'\nsorted descending: {sorted(some_tuple, reverse=True)}'    
+    f'\nsorted length wise: {sorted(some_tuple,key=len)}'    
+    f'\n\nsome_text: {some_text}'    
+    f'\nsorted some_text: {sorted(some_text)}'    
     '\n')
