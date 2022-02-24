@@ -64,6 +64,8 @@ print(f'Attributes of Server Class:\n{dir(Server)}'
     '\n')
 
 # Example 2: Creating object from Server and accessing values of object attributes
+#            Object attributes can be accessed using dot (.) notation.
+#            such as: object_name.attribute_name
 medium = Server()
 print(f'Mammal class and whale object has same attributes?:\t{dir(Server) == dir(medium)}'
     f'\nvalue of no_vcpu attribute of medium object: {medium.no_vcpu}'
@@ -74,3 +76,30 @@ print(f'Mammal class and whale object has same attributes?:\t{dir(Server) == dir
 # Example 3: Changing value of attributes of object.
 medium.no_vcpu = 6
 print(f'value of no_vcpu attribute of medium object: {medium.no_vcpu}\n')
+
+
+# 4. Class Methods
+# Example 1:
+class Human:
+    # Attributes of Human
+    ear_count = 2
+    nose_count = 1
+    eye_count = 2
+    leg_count = 2
+    hand_count = 2
+    finger_count = 20
+
+    # Methods/Behaviour of Human
+    def walk(self):
+        print(f'Walk with {self.leg_count} legs\n')
+    
+    def cook(self):
+        print(f'Cooks using {self.hand_count} hands\n')
+
+    # a class can also contain methods only.
+
+
+# Creating object of Human class
+john = Human()
+john.walk()
+john.cook()
