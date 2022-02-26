@@ -79,6 +79,12 @@ print(f'value of no_vcpu attribute of medium object: {medium.no_vcpu}\n')
 
 
 # 4. Class Methods
+'''
+**note 1:
+The 'self' parameter is a reference to the current instance of the class, and is 
+used to access the attributes and methods of the class in python. It binds the 
+attributes with the given arguments.
+'''
 # Example 1:
 class Human:
     # Attributes of Human
@@ -103,3 +109,37 @@ class Human:
 john = Human()
 john.walk()
 john.cook()
+
+
+# 5. Constructor
+'''
+**note 2:
+Constructors are generally used for instantiating an object. The task of constructors 
+is to initialize(assign values) to the data members of the class when an object of 
+the class is created. In Python the __init__() method is called the constructor and 
+is always called when an object is created.
+
+In other words, __init__() function can be used to assign values to object properties, 
+or other operations that are necessary to do when the object is being created.
+'''
+
+# Example 1:
+class Dog:
+    
+    # class attribute
+    leg_count = 4
+
+    # instance attribute, note that usage of self keyword for defining instance 
+    # attributes but not for class attribute
+    def __init__(self):
+        self.color = 'Black'
+        self.height = 'Medium'
+
+tony = Dog()
+# while creating an object using constructor, argument for self parameter is not required
+print(f'tony.leg_count: {tony.leg_count}'
+    f'\ntony.color: {tony.color}'
+    f'\ntony.height: {tony.height}'
+    '\n')
+
+
