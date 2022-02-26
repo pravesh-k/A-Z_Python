@@ -143,3 +143,44 @@ print(f'tony.leg_count: {tony.leg_count}'
     '\n')
 
 
+'''
+**note 3:
+Class Attributes vs Instance Attributes:
+Class attributes are the variables defined directly in the class that are shared by all 
+objects of the class. Instance attributes are attributes or properties attached to an 
+instance of a class. Instance attributes are defined in the constructor.
+
+Class attributes can be accessed via using class.attribute notation as well as
+object.attribute notation but instance attribute can only be accessed via object.attribute
+notation.
+
+Changing value of class attribute via class.attribute=value will be reflected to all the
+objects but changing value of instance attribute will not be reflected in other objects of
+same class.
+'''
+
+# Example 2:
+class Example:
+    
+    count_1 = 0
+    count_2 = 0
+
+    def __init__(self):
+        Example.count_1 += 1
+        self.count_2 += 5
+
+
+obj1 = Example()
+print(f'obj1.count_1: {obj1.count_1}\t\tobj1.count_2: {obj1.count_2}')
+obj2 = Example()
+print(f'obj2.count_1: {obj2.count_1}\t\tobj2.count_2: {obj2.count_2}')
+obj3 = Example()
+print(f'obj3.count_1: {obj3.count_1}\t\tobj3.count_2: {obj3.count_2}\n')
+
+# Observation: when count_1 class attribute is changed using classname.attribute, the change
+# is visible through out the class objects, even the objects created further will reflect the
+# change. While the count_2 class attribute when accessed and modified using objectname.
+# attribute, the changed value is not reflected throughout the class objects, rather count_2 
+# is initialized each time.
+# The class attribute can be accessed anywhere in the program using classname.attribute 
+# notation
