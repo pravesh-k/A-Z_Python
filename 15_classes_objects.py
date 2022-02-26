@@ -184,3 +184,23 @@ print(f'obj3.count_1: {obj3.count_1}\t\tobj3.count_2: {obj3.count_2}\n')
 # is initialized each time.
 # The class attribute can be accessed anywhere in the program using classname.attribute 
 # notation
+
+# Example 3: Parameterized constructors (the above examples do not require any arguments while 
+# creating an object since the __init__() method does not ask for any parameter). 
+# An __init__() can accept arguments as normally as a parameterized function can accept.
+
+class Cellphone:
+    
+    def __init__(self, brand, screensize, os, ram, storage=128):        
+        #default parameter storage
+        self.brand = brand
+        self.screensize = screensize
+        self.os = os
+        self.ram = ram
+        self.storage = storage
+
+cell_1 = Cellphone('OnePlus', '6.3 inches', 'Android 12', 6, 64) # overriding default storage
+print(f'attribute of cell_1 in dict form:\n{vars(cell_1)}\n')
+
+cell_2 = Cellphone('Iphone', '5.8 inches', 'IOS 13', 8) # keeping default storage
+print(f'attribute of cell_2 in dict form:\n{vars(cell_2)}\n')
