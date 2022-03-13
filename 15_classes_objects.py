@@ -177,21 +177,23 @@ print(f'obj2.count_1: {obj2.count_1}\t\tobj2.count_2: {obj2.count_2}')
 obj3 = Example()
 print(f'obj3.count_1: {obj3.count_1}\t\tobj3.count_2: {obj3.count_2}\n')
 
-# Observation: when count_1 class attribute is changed using classname.attribute, the change
-# is visible through out the class objects, even the objects created further will reflect the
-# change. While the count_2 class attribute when accessed and modified using objectname.
-# attribute, the changed value is not reflected throughout the class objects, rather count_2 
-# is initialized each time.
-# The class attribute can be accessed anywhere in the program using classname.attribute 
-# notation
+'''
+Observation: when count_1 class attribute is changed using classname.attribute, the change
+is visible through out the class objects, even the objects created further will reflect the
+change. While the count_2 class attribute when accessed and modified using objectname.
+attribute, the changed value is not reflected throughout the class objects, rather count_2 
+is initialized each time.
+The class attribute can be accessed anywhere in the program using classname.attribute 
+notation
+'''
 
-# Example 3: Parameterized constructors (the above examples do not require any arguments while 
+# Example 3: Parameterized constructors (the above examples does not require any arguments while 
 # creating an object since the __init__() method does not ask for any parameter). 
 # An __init__() can accept arguments as normally as a parameterized function can accept.
 
 class Cellphone:
     
-    def __init__(self, brand, screensize, os, ram, storage=128):        
+    def __init__(self, brand, screensize, os, ram, storage=128):
         #default parameter storage
         self.brand = brand
         self.screensize = screensize

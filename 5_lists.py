@@ -179,11 +179,11 @@ print('prime_num_list =', prime_num_list,
 #    syntax: a_list.extend(iterable_object)
 more_fruits_list = ['grapes', 'pineapple']
 fruit_list.extend(more_fruits_list)
-print('fruit_list =', fruit_list,
+print('extend method:\nfruit_list =', fruit_list,
     '\n'
     )
 
-# the append function is equivalent to the below operation
+# the extend function is equivalent to the below operation
 extra_fruit_lists = ['mango', 'strawberry']
 fruit_list[len(fruit_list):] = extra_fruit_lists
 print('fruit_list =', fruit_list,
